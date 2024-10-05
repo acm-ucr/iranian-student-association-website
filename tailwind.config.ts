@@ -4,10 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        sw: {
-          "gold-100": "#D09742",
-          "gold-200": "#6A4D22",
-          white: "#FFDA7C",
+        isa: {
+          "dark-red": "#540317",
+          "light-red": "#7D454D",
+          "bright-yellow": "#F6DE50",
+          "dark-yellow" : "#BF9B36"
         },
       },
     },
