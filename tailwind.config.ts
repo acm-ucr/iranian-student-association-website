@@ -9,6 +9,7 @@ module.exports = {
           "light-red": "#7D454D",
           "bright-yellow": "#F6DE50",
           "dark-yellow": "#BF9B36",
+          "beige-100": "#f5e7d5",
         },
       },
     },
