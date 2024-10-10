@@ -12,7 +12,7 @@ type item = {
 const Navigation = () => {
   return (
     <nav className="bg-beige-100 w-full border-gray-200 py-4">
-      <div className="flex items-center justify-between w-full px-6">
+      <div className="flex w-full items-center justify-between px-6">
         <div className="flex items-center">
           <div className="rounded-full border-2 border-black">
             <Image
@@ -38,6 +38,6 @@ const Navigation = () => {
       </div>
     </nav>
   );
-}
+};
 
 export default Navigation;
