@@ -1,5 +1,7 @@
+import Footer from '../components/footer'
+import React from 'react';
 const Home = () => {
-  return <div className="bg-isa-dark-red">Hello World</div>;
+  return <div><Footer /> </div>;
 };
 
 export default Home;
