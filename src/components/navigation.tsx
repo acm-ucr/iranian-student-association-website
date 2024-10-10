@@ -9,24 +9,24 @@ type item = {
   href: string;
 };
 
-export default function Navigation() {
+const Navigation = () => {
   return (
     <nav className="bg-beige-100 w-full border-gray-200 py-4">
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="flex items-center justify-between w-full px-6">
         <div className="flex items-center">
           <div className="rounded-full border-2 border-black">
             <Image
               src={Logo}
               alt="Logo"
-              width={50}
-              height={50}
+              width={75}
+              height={75}
               className="rounded-full"
             />
           </div>
         </div>
 
         {/* nav stuff */}
-        <ul className="flex space-x-8 font-semibold text-black">
+        <ul className="flex space-x-8 text-lg font-semibold text-black">
           {items.map((item: item, index: number) => (
             <Link href={item.href} key={index}>
               <div className="transition-colors duration-300 hover:text-gray-600">
@@ -39,3 +39,5 @@ export default function Navigation() {
     </nav>
   );
 }
+
+export default Navigation;
