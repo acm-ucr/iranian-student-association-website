@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
+import Navigation from "@/components/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: LayoutProps) {
         className={`${inter.className} min-h-screen`}
         style={{ backgroundColor: "#FFEFD7" }}
       >
+        <Navigation />
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
       </body>
     </html>
