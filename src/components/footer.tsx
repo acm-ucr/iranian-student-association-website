@@ -2,19 +2,32 @@ import React from "react";
 import { FOOTER } from "@/utils/footer";
 import Link from "next/link";
 import Image from "next/image";
-import FooterBg from "../public/footer-bg.svg";
-import BottomBg from "../public/Group 400.svg";
+import FooterBg from "../data/footer-bg-cropped7.svg";
+import BottomBg from "../data/Group 400.svg";
+
 const Footer = () => {
   return (
     <div className="font-sans drop-shadow">
-      <Image
-        className="flex w-full justify-center py-1"
-        src={FooterBg}
-        alt="Footer Bg"
-      />
-      <div className="flex justify-between py-1 pl-9 pr-10 font-medium text-black">
-        <div className="text-4xl tracking-widest"> ISA at UCR</div>
-        <div className="mt-1 flex space-x-10 text-4xl">
+      <div className="flex w-full flex-row">
+        <Image
+          className="flex w-1/3 object-cover"
+          src={FooterBg}
+          alt="Footer Bg"
+        />
+        <Image
+          className="flex w-1/3 scale-x-[-1] object-cover"
+          src={FooterBg}
+          alt="Footer Bg"
+        />
+        <Image
+          className="flex w-1/3 object-cover"
+          src={FooterBg}
+          alt="Footer Bg"
+        />
+      </div>
+      <div className="flex justify-between pl-9 pr-10 font-medium text-black">
+        <div className="pt-1 text-3xl tracking-widest"> ISA at UCR</div>
+        <div className="flex space-x-8 pt-3 text-3xl">
           {FOOTER.map((social, index) => (
             <Link key={index} href={social.link}>
               {React.createElement(social.icon)}
@@ -22,8 +35,11 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <Image className="mt-2 w-full" src={BottomBg} alt="Bottom Bg" />
-      <div className="flex flex-row gap-2"></div>
+      <div className="flex w-1/3 flex-row">
+        <Image className="mt-2" src={BottomBg} alt="Bottom Bg" />
+        <Image className="mt-2 scale-x-[-1]" src={BottomBg} alt="Bottom Bg" />
+        <Image className="mt-2" src={BottomBg} alt="Bottom Bg" />
+      </div>
     </div>
   );
 };
