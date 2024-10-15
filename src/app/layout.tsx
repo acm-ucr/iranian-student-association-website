@@ -1,9 +1,9 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Josefin_Sans } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 import Navigation from "@/components/navigation";
 
-const inter = Inter({ subsets: ["latin"] });
+const josefin = Josefin_Sans({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -18,7 +18,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} min-h-screen`}
+        className={`${josefin.className} min-h-screen`}
         style={{ backgroundColor: "#FFEFD7" }}
       >
         <Navigation />
