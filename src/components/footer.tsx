@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="pt-1 text-3xl tracking-widest"> ISA at UCR</div>
         <div className="flex space-x-8 pt-3 text-3xl">
           {FOOTER.map((social, index) => (
-            <Link key={index} href={social.link}>
+            <Link key={index} href={social.link} target="_blank">
               {React.createElement(social.icon)}
             </Link>
           ))}
