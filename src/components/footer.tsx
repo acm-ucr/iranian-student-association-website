@@ -14,7 +14,7 @@ const Footer = () => {
       />
       <div className="flex justify-between py-1 pl-9 pr-10 font-medium text-black">
         <div className="text-4xl tracking-widest"> ISA at UCR</div>
-        <div className="flex space-x-10 mt-1 text-4xl">
+        <div className="mt-1 flex space-x-10 text-4xl">
           {FOOTER.map((social, index) => (
             <Link key={index} href={social.link}>
               {React.createElement(social.icon)}
