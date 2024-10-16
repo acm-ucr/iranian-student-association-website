@@ -3,12 +3,10 @@ import React from "react";
 const Button = () => {
   return (
     <div>
-      <button
-      className="rounded border-2 border-transparent text-xl tracking-widest bg-isa-light-red text-isa-bright-yellow px-10 py-1 inline-block">    
-      Link
+      <button className="inline-block rounded border-2 border-transparent bg-isa-light-red px-10 py-1 text-xl tracking-widest text-isa-bright-yellow">
+        Link
       </button>
-      </div>
-     
+    </div>
   );
 };
 
