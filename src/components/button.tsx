@@ -1,11 +1,6 @@
 import React from "react";
 
 const Button = () => {
-  // Click handler function
-  const handleClick = () => {
-    alert('Button was clicked!');
-  };
-
   return (
     <div>
       <button
