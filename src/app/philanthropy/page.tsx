@@ -1,10 +1,12 @@
 import React from "react";
-import Page from "@/components/philanthropy/page"
+import Page from "@/components/philanthropy/page";
 
 const page = () => {
-  return <div>
-    <Page />
-  </div>;
+  return (
+    <div>
+      <Page />
+    </div>
+  );
 };
 
 export default page;
