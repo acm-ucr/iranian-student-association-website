@@ -2,7 +2,7 @@ import React from "react";
 
 const mission = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center bg-isa-beige-100 p-8">
+    <div className="flex min-h-screen flex-col items-center p-8">
       {/* Image Section */}
       <section className="mb-8">
         <img
