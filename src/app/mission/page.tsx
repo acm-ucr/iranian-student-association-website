@@ -7,7 +7,7 @@ const mission = () => {
       <section className="mb-8">
         <img
           src="/mission/group.svg"
-          className="aspect-w-16 aspect-h-9 w-full max-w-screen-xl rounded-lg object-cover shadow-lg"
+          className="aspect-w-16 aspect-h-9 w-full max-w-6xl rounded-lg object-cover shadow-lg"
         />
       </section>
       <section className="mb-8 mt-8 max-w-6xl px-8 text-center">
