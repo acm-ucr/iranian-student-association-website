@@ -1,5 +1,5 @@
-import { FaEnvelope, FaTiktok, FaInstagram, FaSlack } from "react-icons/fa";
-import { SiGroupme } from "react-icons/si";
+import { FaEnvelope, FaTiktok, FaInstagram } from "react-icons/fa";
+import { SiGroupme, SiLinktree } from "react-icons/si";
 
 export const ICONS = [
   {
@@ -19,7 +19,7 @@ export const ICONS = [
     link: "",
   },
   {
-    icon: FaSlack,
+    icon: SiLinktree,
     link: "",
   },
 ];
