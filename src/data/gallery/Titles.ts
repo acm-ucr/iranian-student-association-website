@@ -1,14 +1,14 @@
 export const Titles = [
-  /*{
-        title: "Socials"
-    },*/
+  {
+    title: "Socials",
+  },
   {
     title: "Cultural Events",
   },
-  /*{
-        title: "Tabling"
-    },
-    {
-        title: "Fundraisers"
-    },*/
+  {
+    title: "Tabling",
+  },
+  {
+    title: "Fundraisers",
+  },
 ];

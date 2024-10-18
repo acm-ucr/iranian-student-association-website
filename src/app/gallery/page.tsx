@@ -3,19 +3,28 @@ import Image from "next/image";
 import Button from "@/components/gallery/buttons";
 import { Titles } from "@/data/gallery/Titles";
 import Paisley1 from "@/public/gallery/paisley1.svg";
+import Paisley2 from "@/public/gallery/paisley2.svg";
 
 const gallery = () => {
   return (
     <div className="h-screen w-screen">
-      <div className="absolute top-1/4 z-0">
+      <div className="absolute top-1/4 -z-10">
         <Image
           src={Paisley1}
-          width={200}
-          height={200}
+          width={300}
+          height={300}
           alt="First Paisley on Top Left of Page"
         />
       </div>
-      <div className="z-10 mx-auto flex h-2/6 w-4/5 items-center justify-center rounded-3xl border-2 border-isa-light-red bg-isa-light-gray text-6xl">
+      <div className="absolute right-0 top-full">
+        <Image
+          src={Paisley2}
+          width={350}
+          height={350}
+          alt="First Paisley on Top Left of Page"
+        />
+      </div>
+      <div className="h-full w-full">
         {Titles.map((items, index) => (
           <Button key={index} name={items.title} />
         ))}
