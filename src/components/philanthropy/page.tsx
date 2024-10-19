@@ -2,15 +2,14 @@ import React from "react";
 import Image from "next/image";
 import OurPhilanthropy from "@/public/philanthropy/ourPhilanthropy.svg";
 import Handshake from "@/public/philanthropy/handshake.svg";
-import ChildrenInternational from "@/public/philanthropy/childrenInternational.png";
-import IAWF from "@/public/philanthropy/IAWF.png";
+import ChildrenInternational from "@/public/philanthropy/childrenInternational.svg";
+import IAWF from "@/public/philanthropy/IAWF.svg";
 import Button from "@/components/button";
-import Footer from "@/components/footer";
 
 const page = () => {
   return (
     <div className="max-w-screen flex-col justify-center text-center">
-      <div className="m-20">
+      <div className="m-20 mb-10">
         <Image
           src={OurPhilanthropy}
           width={1362}
@@ -21,7 +20,7 @@ const page = () => {
 
       <Image src={Handshake} width={1524} height={309} alt="Handshake" />
 
-      <div className="m-8 pt-4 text-center text-[52px] font-[400] leading-[65px] tracking-wider text-isa-dark-red">
+      <div className="m-12 mt-10 text-center text-4xl font-[400] leading-[65px] tracking-wider text-isa-dark-red">
         Our philanthropic partner for 2023-2024 is Child International is a
         non-political, non-sectarian volunteer based nonprofit organization that
         aims to provide equal opportunities for displaced and underprivileged
@@ -31,11 +30,11 @@ const page = () => {
 
       <Button />
 
-      <div className="m-6 mb-0 text-[80px] tracking-widest text-black">
+      <div className="m-6 mb-0 text-6xl tracking-widest text-black">
         Previously Supported
       </div>
 
-      <div className="flex justify-center gap-12">
+      <div className="mb-5 flex justify-center gap-12">
         <div className="h-[235px] w-[467px]">
           <Image
             src={ChildrenInternational}
@@ -53,8 +52,6 @@ const page = () => {
           />
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 };
