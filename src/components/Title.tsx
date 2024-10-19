@@ -1,11 +1,10 @@
 import React from "react";
-import Image from "next/image"
 
-const Footer = () => {
+const Title = () => {
     return (
-        <div>
+        <div className="flex justify-center items-center">
             <div>
-
+                
             </div>
         </div>
     );
