@@ -1,7 +1,12 @@
 import React from "react";
+import Background from "@/components/culture/background";
 
 const page = () => {
-  return <div></div>;
+  return (
+    <div>
+      <Background />
+    </div>
+  );
 };
 
 export default page;
