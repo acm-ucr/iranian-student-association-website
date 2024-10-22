@@ -5,8 +5,8 @@ import ButtonLayout from "@/components/gallery/buttonLayout";
 const gallery = () => {
   return (
     <div className="relative min-h-screen">
-        <ButtonLayout />
-        <BackGround />
+      <ButtonLayout />
+      <BackGround />
     </div>
   );
 };
