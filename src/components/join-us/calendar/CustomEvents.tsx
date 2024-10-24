@@ -95,38 +95,35 @@ const CustomEvents = ({ currentMonth, events }: CustomEventsProps) => {
           );
         })}
       </div>
-        
+
       {selectedEvent && (
         <Modal onClose={() => setSelectedEvent(null)}>
-            <h2 className="text-lg font-bold">{selectedEvent.name}</h2>
-            
-            {selectedEvent.isAllDay ? (
-                <p className="mt-2">All Day Event</p>
-            ) : (
-                <p className="mt-2">
-                Date: {new Date(selectedEvent.date).toLocaleDateString()}
-                <br />
-                Time:{" "}
-                {new Date(selectedEvent.date).toLocaleTimeString([], {
-                    hour: "2-digit",
-                    minute: "2-digit",
-                    hour12: true,
-                })}
-                </p>
-            )}
+          <h2 className="text-lg font-bold">{selectedEvent.name}</h2>
 
-            {selectedEvent.location && (
-                <p className="mt-1">Location: {selectedEvent.location}</p>
-            )}
+          {selectedEvent.isAllDay ? (
+            <p className="mt-2">All Day Event</p>
+          ) : (
+            <p className="mt-2">
+              Date: {new Date(selectedEvent.date).toLocaleDateString()}
+              <br />
+              Time:{" "}
+              {new Date(selectedEvent.date).toLocaleTimeString([], {
+                hour: "2-digit",
+                minute: "2-digit",
+                hour12: true,
+              })}
+            </p>
+          )}
 
-            {selectedEvent.details && (
-                <p className="mt-1">Details: {selectedEvent.details}</p>
-            )}
+          {selectedEvent.location && (
+            <p className="mt-1">Location: {selectedEvent.location}</p>
+          )}
 
-            
+          {selectedEvent.details && (
+            <p className="mt-1">Details: {selectedEvent.details}</p>
+          )}
         </Modal>
       )}
-      
     </div>
   );
 };
