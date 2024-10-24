@@ -9,6 +9,8 @@ type CalendarEvent = {
   date: Date;
   location?: string;
   isAllDay: boolean;
+  details?: string;
+  title: string;
 };
 
 type GoogleCalendarEvent = {
@@ -19,6 +21,7 @@ type GoogleCalendarEvent = {
     date?: string;
   };
   location?: string;
+  description?: string;
 };
 
 const Events = () => {
@@ -52,7 +55,7 @@ const Events = () => {
 
         const data = await res.json();
 
-        // console.log("API Response:", data);
+        console.log("API Response:", data);
 
         if (data.items) {
           const eventsData = data.items.map((event: GoogleCalendarEvent) => ({
@@ -61,6 +64,7 @@ const Events = () => {
             date: new Date(event.start.dateTime ?? event.start.date ?? ""),
             location: event.location,
             isAllDay: !event.start.dateTime,
+            details: event.description,
           }));
 
           setEvents(eventsData);

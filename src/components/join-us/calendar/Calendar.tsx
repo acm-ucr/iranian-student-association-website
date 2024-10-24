@@ -6,8 +6,13 @@ import CustomToolbar from "./CustomToolbar";
 import CustomEvents from "./CustomEvents";
 
 interface Event {
-  title: string;
+  id: string;
+  name: string;
   date: Date;
+  location?: string;
+  isAllDay: boolean;
+  details?: string;
+  title: string;
 }
 
 interface CalendarProps {
