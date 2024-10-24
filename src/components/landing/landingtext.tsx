@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import Logo from "@/public/logo.webp";
 
 const text = () => {
   return (
     <>
       <div>
-        <Image src={"/isalogo.png"} width={300} height={400} alt={"isalogo"} />
+        <Image src={Logo} alt={"Logo"} width={300} height={400} />
       </div>
       <div>
         <h1 className="py-8 text-center font-sans text-4xl text-white">
