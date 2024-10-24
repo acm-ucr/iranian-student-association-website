@@ -9,7 +9,7 @@ const Socials = () => {
       </h2>
       <div className="flex justify-center space-x-6">
         {ICONS.map((item, index) => (
-          <Link href={item.link} key={index} passHref>
+          <Link href={item.link} key={index} target="_blank" passHref>
             <div className="h-8 w-8 cursor-pointer text-gray-800">
               <item.icon className="h-8 w-8" />
             </div>

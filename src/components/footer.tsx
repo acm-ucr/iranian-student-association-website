@@ -1,5 +1,5 @@
 import React from "react";
-import { FOOTER } from "@/utils/footer";
+import { ICONS } from "@/data/icons";
 import Link from "next/link";
 import Image from "next/image";
 import FooterBg from "../data/footer-bg-cropped7.svg";
@@ -28,7 +28,7 @@ const Footer = () => {
       <div className="flex justify-between pl-9 pr-10 font-medium text-black">
         <div className="pt-1 text-3xl tracking-widest"> ISA at UCR</div>
         <div className="flex space-x-8 pt-3 text-3xl">
-          {FOOTER.map((social, index) => (
+          {ICONS.map((social, index) => (
             <Link key={index} href={social.link} target="_blank">
               {React.createElement(social.icon)}
             </Link>
