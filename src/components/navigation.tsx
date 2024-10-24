@@ -15,13 +15,15 @@ const Navigation = () => {
       <div className="flex w-full items-center justify-between px-6">
         <div className="flex items-center">
           <div className="rounded-full border-2 border-black">
-            <Image
-              src={Logo}
-              alt="Logo"
-              width={75}
-              height={75}
-              className="rounded-full"
-            />
+            <Link href={"/"}>
+              <Image
+                src={Logo}
+                alt="Logo"
+                width={75}
+                height={75}
+                className="rounded-full"
+              />
+            </Link>
           </div>
         </div>
 
