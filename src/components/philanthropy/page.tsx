@@ -28,7 +28,7 @@ const page = () => {
         and family assistance programs.
       </div>
 
-      <Button />
+      <Button link="test" txt="Link" />
 
       <div className="m-6 mb-0 text-6xl tracking-widest text-black">
         Previously Supported
