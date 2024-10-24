@@ -1,10 +1,10 @@
 import React from "react";
-import Background from "@/components/culture/background";
+import Page from "@/components/philanthropy/page";
 
 const page = () => {
   return (
     <div>
-      <Background />
+      <Page />
     </div>
   );
 };
