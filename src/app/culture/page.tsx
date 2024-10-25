@@ -6,7 +6,7 @@ import CultureTitle from "@/public/culture/Culture.svg";
 const page = () => {
   return (
     <div>
-      <div className="mb-20 flex justify-center">
+      <div className="mb-19 flex justify-center">
         <Image src={CultureTitle} alt="Our Gallery Page Title" />
       </div>
       <Background />
