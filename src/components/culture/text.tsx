@@ -1,4 +1,7 @@
 import React from "react";
+import Image from "next/image";
+import Nowruz from "/src/public/culture/Nowruz.png";
+import ShabeYalda from "/src/public/culture/ShabeYalda.png";
 
 const CultureText = () => {
   return (
@@ -8,7 +11,7 @@ const CultureText = () => {
           <b>Culture</b>
         </h1>
       </div>
-      <div className="container pb-24 pl-16 pt-24 text-start text-4xl text-isa-dark-red">
+      <div className="container pl-16 pt-24 text-start text-4xl text-isa-dark-red">
         <p>
           <b>Nowruz Significance:</b> Nowruz, the Persian New Year, is a
           significant cultural celebration that marks the beginning of the new
@@ -18,7 +21,13 @@ const CultureText = () => {
           cultural influence.
         </p>
       </div>
-
+        <br></br>
+        <div className = "flex flex-row">
+            <Image className = "w-1/2 pl-9  scale-90" src = {ShabeYalda} alt = "ShabeYaldaPhoto" width = {711} height = {433} ></Image>
+            <Image className = "w-1/2 pr-10 scale-90" src = {Nowruz} alt = "NowruzPhoto" width = {556} height = {431} ></Image>
+            
+        </div> 
+        <br></br>
       <div className="container pl-16 text-start text-4xl text-isa-dark-red">
         <p>
           <b>Shabe Yalda Significance:</b> Shabe Yalda, also known as Yalda
