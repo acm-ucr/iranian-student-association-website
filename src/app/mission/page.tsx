@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import MissionTitle from "@/public/Mission/Mission Statement.svg";
+import MissionTitle from "@/public/Mission/MissionStatement.svg";
 
 const page = () => {
   return (
