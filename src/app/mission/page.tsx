@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div>
       <div className="mb-20 flex justify-center">
-        <Image src={MissionTitle} alt="Our MissionTitle Page Title" />
+        <Image src={MissionTitle} alt="Our Mission Page Title" />
       </div>
     </div>
   );
