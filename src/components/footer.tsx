@@ -7,7 +7,7 @@ import BottomBg from "../data/Group 400.svg";
 
 const Footer = () => {
   return (
-    <div className="font-sans drop-shadow">
+    <footer className="font-sans drop-shadow">
       <div className="flex w-full flex-row">
         <Image
           className="flex w-1/3 object-cover"
@@ -40,7 +40,7 @@ const Footer = () => {
         <Image className="mt-2 scale-x-[-1]" src={BottomBg} alt="Bottom Bg" />
         <Image className="mt-2" src={BottomBg} alt="Bottom Bg" />
       </div>
-    </div>
+    </footer>
   );
 };
 export default Footer;

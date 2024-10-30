@@ -1,18 +1,25 @@
 import React from "react";
 import Image from "next/image";
 import Logo from "@/public/logo.webp";
-import ucrBG from "@/public/landing/ucr.webp";
 
 const text = () => {
   return (
     <>
       <div>
-        <Image src={Logo} alt={"Logo"} width={300} height={400} />
-        <Image src={ucrBG} alt={"bg"} width={300} height={400} />
+        <Image
+          src={Logo}
+          alt={"Logo"}
+          width={200}
+          height={200}
+          className="flex justify-self-center rounded-full"
+        />
       </div>
       <div>
-        <h1 className="py-8 text-center font-sans text-4xl text-white">
-          Iranian Student Association
+        <h1 className="py-100 text-center font-josefin text-7xl tracking-widest text-white">
+          Iranian Student
+        </h1>
+        <h1 className="py-100 text-center font-josefin text-7xl tracking-widest text-white">
+          Association
         </h1>
       </div>
       <div>
