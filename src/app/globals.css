@@ -2,25 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-.flex-grow {
-  flex: 1;
-}
-
-footer {
-  text-align: center;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-.footer {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  min-height: 100vh;
-}
