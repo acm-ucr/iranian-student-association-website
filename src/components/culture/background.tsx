@@ -10,9 +10,8 @@ const background = () => {
       <div className="absolute right-0 top-0 z-0">
         <Image src={TopPaisley} height={530} alt={"Top Background Paisley"} />
       </div>
-      <CultureText/>
+      <CultureText />
       <div className="absolute bottom-0 left-0 z-0">
-      
         <Image
           src={BottomPaisley}
           height={650}
