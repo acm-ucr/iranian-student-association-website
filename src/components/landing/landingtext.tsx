@@ -4,7 +4,7 @@ import Logo from "@/public/logo.webp";
 
 const text = () => {
   return (
-    <>
+    <div>
       <div>
         <Image
           src={Logo}
@@ -32,7 +32,7 @@ const text = () => {
           ipsumlorem ipsumv
         </p>
       </div>
-    </>
+    </div>
   );
 };
 
