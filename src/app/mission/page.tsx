@@ -3,7 +3,6 @@ import Image from "next/image";
 import MissionTitle from "@/public/mission/MissionStatement.svg";
 import Page from "../../components/mission/page";
 
-
 const page = () => {
   return (
     <div>
