@@ -5,6 +5,7 @@ import Handshake from "@/public/philanthropy/handshake.svg";
 import ChildrenInternational from "@/public/philanthropy/childrenInternational.svg";
 import IAWF from "@/public/philanthropy/IAWF.svg";
 import Button from "@/components/button";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -28,7 +29,10 @@ const page = () => {
         and family assistance programs.
       </div>
 
-      <Button link="test" txt="Link" />
+      <Button
+        link="https://easy-ware-forms.com/iscc-charity/donate"
+        txt="Donate"
+      />
 
       <div className="m-6 mb-0 text-6xl tracking-widest text-black">
         Previously Supported
