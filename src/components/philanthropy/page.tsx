@@ -9,7 +9,7 @@ import Button from "@/components/button";
 const page = () => {
   return (
     <div className="max-w-screen w-screen flex-col justify-center text-center">
-      <div className="m-10 sm:m-20 mb-10 mt-2 sm:mt-5 justify-self-center">
+      <div className="m-10 mb-10 mt-2 justify-self-center sm:m-20 sm:mt-5">
         <Image
           src={OurPhilanthropy}
           width={1362}
@@ -18,11 +18,11 @@ const page = () => {
         />
       </div>
 
-      <div className='justify-self-center min-w-screen'>
+      <div className="min-w-screen justify-self-center">
         <Image src={Handshake} width={1524} height={309} alt="Handshake" />
       </div>
 
-      <div className="m-12 mt-10 mb-8 text-center sm:text-lg md:text-2xl lg:text-4xl lg:mb-12 font-[400] lg:leading-[65px] tracking-wider text-isa-dark-red">
+      <div className="m-12 mb-8 mt-10 text-center font-[400] tracking-wider text-isa-dark-red sm:text-lg md:text-2xl lg:mb-12 lg:text-4xl lg:leading-[65px]">
         Our philanthropic partner for 2023-2024 is Child International is a
         non-political, non-sectarian volunteer based nonprofit organization that
         aims to provide equal opportunities for displaced and underprivileged
@@ -31,12 +31,12 @@ const page = () => {
       </div>
 
       <Button link="test" txt="Link" />
-      
-      <div className="m-6 mb-0 mt-8 text-xl lg:text-6xl md:text-5xl sm:text-4xl lg:mt-12 tracking-widest text-black">
+
+      <div className="m-6 mb-0 mt-8 text-xl tracking-widest text-black sm:text-4xl md:text-5xl lg:mt-12 lg:text-6xl">
         Previously Supported
       </div>
 
-      <div className="flex justify-center gap-12 ml-10 mr-10 h-24 sm:ml-8 sm:mr-8 sm:h-44 md:ml-16 md:mr-16 md:h-52 lg:h-72">
+      <div className="ml-10 mr-10 flex h-24 justify-center gap-12 sm:ml-8 sm:mr-8 sm:h-44 md:ml-16 md:mr-16 md:h-52 lg:h-72">
         <div className="h-[235px] w-[467px]">
           <Image
             src={ChildrenInternational}
