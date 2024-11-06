@@ -9,7 +9,7 @@ import Button from "@/components/button";
 const page = () => {
   return (
     <div className="max-w-screen w-screen flex-col justify-center text-center">
-      <div className="m-20 mb-10 mt-2 sm:mt-5 justify-self-center">
+      <div className="m-10 sm:m-20 mb-10 mt-2 sm:mt-5 justify-self-center">
         <Image
           src={OurPhilanthropy}
           width={1362}
@@ -22,7 +22,7 @@ const page = () => {
         <Image src={Handshake} width={1524} height={309} alt="Handshake" />
       </div>
 
-      <div className="m-12 mt-10 text-center lg:text-4xl md:text-2xl sm:text-lg font-[400] lg:leading-[65px] tracking-wider text-isa-dark-red">
+      <div className="m-12 mt-10 mb-8 text-center sm:text-lg md:text-2xl lg:text-4xl lg:mb-12 font-[400] lg:leading-[65px] tracking-wider text-isa-dark-red">
         Our philanthropic partner for 2023-2024 is Child International is a
         non-political, non-sectarian volunteer based nonprofit organization that
         aims to provide equal opportunities for displaced and underprivileged
@@ -32,11 +32,11 @@ const page = () => {
 
       <Button link="test" txt="Link" />
       
-      <div className="m-6 mb-0 mt-12 text-2xl lg:text-6xl md:text-5xl sm:text-4xl tracking-widest text-black">
+      <div className="m-6 mb-0 mt-8 text-xl lg:text-6xl md:text-5xl sm:text-4xl lg:mt-12 tracking-widest text-black">
         Previously Supported
       </div>
 
-      <div className="flex justify-center gap-12 ml-10 mr-10 mb- sm:ml-8 sm:mr-8 sm:h-52 md:ml-16 md:mr-16 md:h-56 lg:h-72">
+      <div className="flex justify-center gap-12 ml-10 mr-10 h-24 sm:ml-8 sm:mr-8 sm:h-44 md:ml-16 md:mr-16 md:h-52 lg:h-72">
         <div className="h-[235px] w-[467px]">
           <Image
             src={ChildrenInternational}
