@@ -5,7 +5,6 @@ import Handshake from "@/public/philanthropy/handshake.svg";
 import ChildrenInternational from "@/public/philanthropy/childrenInternational.svg";
 import IAWF from "@/public/philanthropy/IAWF.svg";
 import Button from "@/components/button";
-import Link from "next/link";
 
 const page = () => {
   return (
