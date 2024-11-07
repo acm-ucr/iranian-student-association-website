@@ -36,8 +36,8 @@ const page = () => {
       <div className="m-6 mb-0 text-6xl tracking-widest text-black">
         Currently Supporting
       </div>
-      
-      <div className="flex justify-center items-center">
+
+      <div className="flex items-center justify-center">
         <div className="h-[235px] w-[400px]">
           <Image
             src={ISCC}
@@ -47,7 +47,7 @@ const page = () => {
           />
         </div>
       </div>
-      
+
       <div className="m-6 mb-0 text-6xl tracking-widest text-black">
         Previously Supported
       </div>
