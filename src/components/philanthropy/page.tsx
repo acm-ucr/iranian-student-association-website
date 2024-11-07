@@ -4,6 +4,7 @@ import OurPhilanthropy from "@/public/philanthropy/ourPhilanthropy.svg";
 import Handshake from "@/public/philanthropy/handshake.svg";
 import ChildrenInternational from "@/public/philanthropy/childrenInternational.svg";
 import IAWF from "@/public/philanthropy/IAWF.svg";
+import ISCC from "@/public/philanthropy/ISCC.svg";
 import Button from "@/components/button";
 
 const page = () => {
@@ -32,7 +33,21 @@ const page = () => {
         link="https://easy-ware-forms.com/iscc-charity/donate"
         txt="Donate"
       />
-
+      <div className="m-6 mb-0 text-6xl tracking-widest text-black">
+        Currently Supporting
+      </div>
+      
+      <div className="flex justify-center items-center">
+        <div className="h-[235px] w-[400px]">
+          <Image
+            src={ISCC}
+            width={450}
+            height={235}
+            alt="International Society for Children with Cancer Logo"
+          />
+        </div>
+      </div>
+      
       <div className="m-6 mb-0 text-6xl tracking-widest text-black">
         Previously Supported
       </div>
