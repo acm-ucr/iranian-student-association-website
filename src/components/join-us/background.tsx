@@ -6,16 +6,15 @@ import Title from "@/components/join-us/title";
 const BackgroundComponent = () => {
   return (
     <div>
-      <div className="mb-20 flex justify-center">
-        <Title />
-      </div>
       <div className="bg-beige-100 relative h-screen w-full">
         <img
           src={Paisley1.src}
           alt="Paisley Top Left"
           className="absolute left-0 top-10 h-auto w-60"
         />
-
+        <div className="mb-20 flex justify-center">
+          <Title />
+        </div>
         <img
           src={Paisley2.src}
           alt="Paisley Bottom Right"

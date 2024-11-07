@@ -5,7 +5,7 @@ import Title from "/public/join-us/JoinUs.svg";
 const title = () => {
   return (
     <div className="max-w-screen relative flex-col justify-center text-center">
-      <Image src={Title} alt="Join Us Title" width={247} height={65}></Image>
+      <Image src={Title} alt="Join Us Title" width={755} height={222}></Image>
     </div>
   );
 };
