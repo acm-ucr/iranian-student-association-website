@@ -38,7 +38,7 @@ const page = () => {
       </div>
 
       <div className="flex items-center justify-center">
-        <div className="h-[235px] w-[400px]">
+        <div className="h-1/2 w-1/4">
           <Image
             src={ISCC}
             width={450}
@@ -53,7 +53,7 @@ const page = () => {
       </div>
 
       <div className="mb-5 flex justify-center gap-12">
-        <div className="h-[235px] w-[467px]">
+        <div className="h-1/2 w-1/4">
           <Image
             src={ChildrenInternational}
             width={467}
@@ -61,7 +61,7 @@ const page = () => {
             alt="Children International Logo"
           />
         </div>
-        <div className="h-[278px] w-[590px]">
+        <div className="h-1/2 w-1/4">
           <Image
             src={IAWF}
             width={590}
