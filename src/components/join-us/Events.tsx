@@ -83,9 +83,11 @@ const Events = () => {
   }, [currentMonth]);
 
   return (
-    <div className="">
+    <div className="flex min-h-screen flex-col items-center px-4 py-8">
       {loading ? (
-        <p>Loading events...</p>
+        <p className="text-center text-lg md:text-xl lg:text-2xl">
+          Loading events...
+        </p>
       ) : (
         <Calendar
           currentMonth={currentMonth}

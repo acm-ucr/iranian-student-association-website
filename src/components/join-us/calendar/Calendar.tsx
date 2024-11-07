@@ -23,13 +23,15 @@ interface CalendarProps {
 
 const Calendar = ({ currentMonth, events, onMonthChange }: CalendarProps) => {
   return (
-    <div className="shadow-lg, mx-auto w-full max-w-4xl overflow-hidden rounded-3xl border-4 border-isa-dark-red bg-isa-beige-100 bg-opacity-80 p-5 text-center drop-shadow-md backdrop-blur-0">
+    <div className="relative mx-auto flex w-full max-w-4xl flex-col overflow-hidden rounded-3xl border-4 border-isa-dark-red bg-isa-beige-100 bg-opacity-80 p-5 text-center shadow-lg drop-shadow-md backdrop-blur-0">
       <CustomHeader currentMonth={currentMonth} />
       <CustomToolbar
         onMonthChange={onMonthChange}
         currentMonth={currentMonth}
       />
-      <CustomEvents currentMonth={currentMonth} events={events} />
+      <div className="mt-4">
+        <CustomEvents currentMonth={currentMonth} events={events} />
+      </div>
     </div>
   );
 };
