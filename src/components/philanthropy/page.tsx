@@ -4,6 +4,7 @@ import OurPhilanthropy from "@/public/philanthropy/ourPhilanthropy.svg";
 import Handshake from "@/public/philanthropy/handshake.svg";
 import ChildrenInternational from "@/public/philanthropy/childrenInternational.svg";
 import IAWF from "@/public/philanthropy/IAWF.svg";
+import ISCC from "@/public/philanthropy/ISCC.svg";
 import Button from "@/components/button";
 
 const page = () => {
@@ -30,14 +31,32 @@ const page = () => {
         and family assistance programs.
       </div>
 
-      <Button link="test" txt="Link" />
+      <Button
+        link="https://easy-ware-forms.com/iscc-charity/donate"
+        txt="Donate"
+      />
+
+      <div className="m-6 mb-0 text-6xl tracking-widest text-black">
+        Currently Supporting
+      </div>
+
+      <div className="flex items-center justify-center">
+        <div className="h-1/2 w-1/4">
+          <Image
+            src={ISCC}
+            width={450}
+            height={235}
+            alt="International Society for Children with Cancer Logo"
+          />
+        </div>
+      </div>
 
       <div className="m-6 mb-0 mt-8 text-xl tracking-widest text-black sm:text-4xl md:text-5xl lg:mt-12 lg:text-6xl">
         Previously Supported
       </div>
 
       <div className="ml-10 mr-10 flex h-24 justify-center gap-12 sm:ml-8 sm:mr-8 sm:h-44 md:ml-16 md:mr-16 md:h-52 lg:h-72">
-        <div className="h-[235px] w-[467px]">
+        <div className="h-1/2 w-1/4">
           <Image
             src={ChildrenInternational}
             width={467}
@@ -45,7 +64,7 @@ const page = () => {
             alt="Children International Logo"
           />
         </div>
-        <div className="h-[278px] w-[590px]">
+        <div className="h-1/2 w-1/4">
           <Image
             src={IAWF}
             width={590}
