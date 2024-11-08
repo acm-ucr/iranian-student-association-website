@@ -6,9 +6,12 @@ import GalleryTitle from "@/public/gallery/Gallery.svg";
 
 const gallery = () => {
   return (
-    <div className="relative h-full">
-      <div className="mb-20 flex justify-center">
-        <Image src={GalleryTitle} alt="Our Gallery Page Title" />
+    <div className="relative h-full ">
+      <div className="flex justify-center w-screen">
+        <Image src={GalleryTitle} 
+        alt="Our Gallery Page Title" 
+        className="w-4/6 md:w-1/2 md:mb-15 lg:mb-10 xl:w-5/12"
+        />
       </div>
       <BackGround />
       <ButtonLayout />
