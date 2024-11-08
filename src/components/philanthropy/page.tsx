@@ -36,7 +36,7 @@ const page = () => {
         txt="Donate"
       />
 
-      <div className="m-6 mb-0 text-6xl tracking-widest text-black">
+      <div className="m-6 mb-0 text-xl tracking-widest text-black sm:text-4xl md:text-5xl lg:text-6xl">
         Currently Supporting
       </div>
 
@@ -55,7 +55,7 @@ const page = () => {
         Previously Supported
       </div>
 
-      <div className="ml-10 mr-10 flex h-24 justify-center gap-12 sm:ml-8 sm:mr-8 sm:h-44 md:ml-16 md:mr-16 md:h-52 lg:h-72">
+      <div className="mb-11 ml-10 mr-10 flex justify-center gap-12 sm:ml-8 sm:mr-8 md:ml-16 md:mr-16">
         <div className="h-1/2 w-1/4">
           <Image
             src={ChildrenInternational}
