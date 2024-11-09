@@ -19,7 +19,11 @@ const Navigation = () => {
     <nav className="bg-beige-100 w-full border-gray-200 py-4">
       <div className="flex w-full items-center justify-between px-4 sm:px-6">
         {/* Logo Section */}
-        <Link href="/" onClick={() => setSelected("")} className="flex items-center">
+        <Link
+          href="/"
+          onClick={() => setSelected("")}
+          className="flex items-center"
+        >
           <div className="rounded-full border-2 border-black">
             <Image
               src={Logo}
@@ -32,11 +36,13 @@ const Navigation = () => {
         </Link>
 
         {/* Desktop Navigation Items */}
-        <ul className="hidden sm:flex space-x-4 md:space-x-8 lg:space-x-8">
+        <ul className="hidden space-x-4 sm:flex md:space-x-8 lg:space-x-8">
           {items.map((item: Item, index: number) => (
             <li key={index}>
               <Link href={item.href} onClick={() => setSelected(item.name)}>
-                <div className={`transition-colors duration-300 hover:text-gray-600 text-sm md:text-lg lg:text-xl font-semibold ${selected === item.name ? 'text-black' : 'text-gray-800'}`}>
+                <div
+                  className={`text-sm font-semibold transition-colors duration-300 hover:text-gray-600 md:text-lg lg:text-xl ${selected === item.name ? "text-black" : "text-gray-800"}`}
+                >
                   {item.name}
                 </div>
               </Link>
@@ -45,16 +51,18 @@ const Navigation = () => {
         </ul>
 
         {/* Mobile Menu Button */}
-        <div className="sm:hidden flex items-center">
+        <div className="flex items-center sm:hidden">
           <FaBars
-            className="text-3xl cursor-pointer text-black"
+            className="cursor-pointer text-3xl text-black"
             onClick={() => setNav(!nav)}
           />
         </div>
       </div>
 
       {/* Mobile Navigation (Burger Drop Down) */}
-      <div className={`sm:hidden ${nav ? "flex" : "hidden"} flex-col items-center bg-beige-100 w-full py-4`}>
+      <div
+        className={`sm:hidden ${nav ? "flex" : "hidden"} bg-beige-100 w-full flex-col items-center py-4`}
+      >
         {items.map((item: Item, index: number) => (
           <Link
             href={item.href}
@@ -63,7 +71,7 @@ const Navigation = () => {
               setSelected(item.name);
               setNav(false);
             }}
-            className="w-full text-center py-2 text-black font-semibold hover:bg-gray-200"
+            className="w-full py-2 text-center font-semibold text-black hover:bg-gray-200"
           >
             {item.name}
           </Link>
