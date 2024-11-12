@@ -43,7 +43,7 @@ export async function generateStaticParams(): Promise<PageParams[]> {
 }
 
 const Page: React.FC<PageProps> = ({ params }) => {
-  if (!PAGES.hasOwnProperty(params.type)) {
+  if (!Object.prototype.hasOwnProperty.call(PAGES, params.type)) {
     return <NotFound />;
   }
 
