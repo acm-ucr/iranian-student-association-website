@@ -21,7 +21,7 @@ type PageParams = {
 };
 
 type PageProps = {
-  params: PageParams;
+  params: Promise<PageParams>;
 };
 
 // Define the type for PICTURES object
@@ -42,12 +42,13 @@ export async function generateStaticParams(): Promise<PageParams[]> {
   return allPages.map((page) => ({ type: page }));
 }
 
-const Page: React.FC<PageProps> = ({ params }) => {
-  if (!Object.prototype.hasOwnProperty.call(PAGES, params.type)) {
+const Page: React.FC<PageProps> = async ({ params }) => {
+  const resolvedParams = await params;
+  if (!Object.prototype.hasOwnProperty.call(PAGES, resolvedParams.type)) {
     return <NotFound />;
   }
 
-  const images = (PICTURES as PicturesType)[params.type];
+  const images = (PICTURES as PicturesType)[resolvedParams.type];
 
   return (
     <div className="flex flex-col items-center bg-contain pt-10 text-7xl">
@@ -58,7 +59,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
         {images.map((image, index) => (
           <Image
             src={image.src}
-            alt={`${PAGES[params.type]}_${index}`}
+            alt={`${PAGES[resolvedParams.type]}_${index}`}
             key={index}
             width={image.width}
             height={image.height}
