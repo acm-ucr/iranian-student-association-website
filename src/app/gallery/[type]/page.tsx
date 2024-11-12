@@ -50,7 +50,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
   const images = (PICTURES as PicturesType)[params.type];
 
   return (
-    <div className="bg-blobs1 bg-biscuits-green-100 flex flex-col items-center bg-contain pt-10 text-7xl md:bg-cover">
+    <div className="flex flex-col items-center bg-contain pt-10 text-7xl">
       <div className="mb-20 flex justify-center">
         <Image src={SocialTitle} alt="Our Culture Page Title" />
       </div>
