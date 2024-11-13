@@ -1,5 +1,5 @@
-import NotFound from "@/app/not-found";
 import { StaticImageData } from "next/image";
+import NotFound from "@/app/not-found";
 import Image from "next/image";
 import socialTitle from "@/public/gallery/socials/socialTitle.svg";
 import culturalTitle from "@/public/gallery/cultural-events/culturalTitle.svg";
@@ -15,7 +15,13 @@ export async function generateStaticParams() {
   return allPages.map((page) => ({ type: page }));
 }
 
-const Page = async ({ params }: { params: { type: string } }) => {
+type PageProps = {
+  params: {
+    type: string;
+  };
+};
+
+const Page = async ({ params }: PageProps) => {
   const { type } = await Promise.resolve(params);
 
   const PAGES: Record<string, string> = {
