@@ -12,6 +12,7 @@ import social8 from "@/public/gallery/socials/socials8.webp";
 import social9 from "@/public/gallery/socials/socials9.webp";
 
 // cultural events images
+import charmander from "@/public/gallery/cultural-events/charmander.webp";
 
 // tabling images
 
@@ -29,7 +30,14 @@ export const PICTURES: Record<string, (string | StaticImageData)[]> = {
     social7,
     social2,
   ],
-  "cultural-events": [],
+  "cultural-events": [
+    charmander,
+    charmander,
+    charmander,
+    charmander,
+    charmander,
+    charmander,
+  ],
   tabling: [],
   fundraisers: [],
 };

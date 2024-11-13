@@ -1,6 +1,10 @@
 import NotFound from "@/app/not-found";
+import { StaticImageData } from "next/image";
 import Image from "next/image";
 import socialTitle from "@/public/gallery/socials/socialTitle.svg";
+import culturalTitle from "@/public/gallery/cultural-events/culturalTitle.svg";
+import tablingTitle from "@/public/gallery/tabling/tablingTitle.svg";
+import fundraisersTitle from "@/public/gallery/fundraisers/fundraisersTitle.svg";
 import bg1 from "@/public/gallery/socials/bg1.svg";
 import bg2 from "@/public/gallery/socials/bg2.svg";
 import GalleryImages from "@/components/gallery/GalleryImages";
@@ -21,9 +25,12 @@ const Page = async ({ params }: { params: { type: string } }) => {
     fundraisers: "Fundraisers",
   };
 
-  console.log("Page Type:", type);
-  console.log("Page Title:", PAGES[type]);
-  console.log("Images:", PICTURES[type]);
+  const TITLE_IMAGES: Record<string, StaticImageData> = {
+    socials: socialTitle,
+    "cultural-events": culturalTitle,
+    tabling: tablingTitle,
+    fundraisers: fundraisersTitle,
+  };
 
   if (!PAGES[type] || !PICTURES[type]) {
     return <NotFound />;
@@ -48,8 +55,8 @@ const Page = async ({ params }: { params: { type: string } }) => {
 
       <Image
         className="my-4 w-2/3 max-w-xs md:max-w-sm lg:max-w-md"
-        src={socialTitle}
-        alt="Social Title"
+        src={TITLE_IMAGES[type]}
+        alt={`${PAGES[type]} Title`}
         width={200}
         height={100}
       />

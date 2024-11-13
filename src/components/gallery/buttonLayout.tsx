@@ -10,12 +10,25 @@ const buttonLayout = () => {
   const handleSocialsRedirect = () => {
     router.push("/gallery/socials");
   };
+
+  const handleCulturalEventsRedirect = () => {
+    router.push("/gallery/cultural-events");
+  };
+
+  const handleTablingRedirect = () => {
+    router.push("/gallery/tabling");
+  };
+
+  const handleFundraisersRedirect = () => {
+    router.push("/gallery/fundraisers");
+  };
+
   return (
     <div className="h-screen w-full">
       <Button name="Socials" onClick={handleSocialsRedirect} />
-      {/* <Button name="Cultural Events" onClick={}/> */}
-      {/* <Button name="Tabling" onClick={}/> */}
-      {/* <Button name="Fundraisers" onClick={}/> */}
+      <Button name="Cultural Events" onClick={handleCulturalEventsRedirect} />
+      <Button name="Tabling" onClick={handleTablingRedirect} />
+      <Button name="Fundraisers" onClick={handleFundraisersRedirect} />
     </div>
   );
 };
