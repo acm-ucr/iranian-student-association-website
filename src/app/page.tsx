@@ -1,5 +1,12 @@
+import Text from "@/components/landing/landingtext";
+import React from "react";
+
 const Home = () => {
-  return <div>{/* <div className="bg-isa-dark-red">Hello World</div>; */}</div>;
+  return (
+    <div>
+      <Text />
+    </div>
+  );
 };
 
 export default Home;

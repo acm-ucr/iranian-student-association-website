@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import TopPaisley from "@/public/culture/paisley1.svg";
 import BottomPaisley from "@/public/culture/paisley2.svg";
+import CultureText from "./text";
 
 const background = () => {
   return (
@@ -9,11 +10,13 @@ const background = () => {
       <div className="absolute right-0 top-0 z-0">
         <Image src={TopPaisley} height={530} alt={"Top Background Paisley"} />
       </div>
-      <div className="absolute bottom-0 left-0 z-0">
+      <CultureText />
+      <div className="absolute bottom-0 left-0 -z-10">
         <Image
           src={BottomPaisley}
           height={650}
           alt={"Bottom Background Paisley"}
+          className="z-0"
         />
       </div>
     </div>

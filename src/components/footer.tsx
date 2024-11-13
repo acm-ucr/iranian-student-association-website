@@ -1,5 +1,5 @@
 import React from "react";
-import { FOOTER } from "@/utils/footer";
+import { ICONS } from "@/data/icons";
 import Link from "next/link";
 import Image from "next/image";
 import FooterBg from "../data/footer-bg-cropped7.svg";
@@ -7,7 +7,7 @@ import BottomBg from "../data/Group 400.svg";
 
 const Footer = () => {
   return (
-    <div className="font-sans drop-shadow">
+    <footer className="font-sans drop-shadow">
       <div className="flex w-full flex-row">
         <Image
           className="flex w-1/3 object-cover"
@@ -25,10 +25,12 @@ const Footer = () => {
           alt="Footer Bg"
         />
       </div>
-      <div className="flex justify-between pl-9 pr-10 font-medium text-black">
-        <div className="pt-1 text-3xl tracking-widest"> ISA at UCR</div>
-        <div className="flex space-x-8 pt-3 text-3xl">
-          {FOOTER.map((social, index) => (
+      <div className="flex justify-between pl-4 pr-4 text-sm font-medium text-black sm:pl-9 sm:pr-10 sm:text-2xl">
+        <div className="pt-1 text-lg tracking-widest sm:text-3xl">
+          ISA at UCR
+        </div>
+        <div className="flex space-x-4 pt-2 text-lg sm:space-x-8 sm:pt-3 sm:text-3xl">
+          {ICONS.map((social, index) => (
             <Link key={index} href={social.link} target="_blank">
               {React.createElement(social.icon)}
             </Link>
@@ -40,7 +42,7 @@ const Footer = () => {
         <Image className="mt-2 scale-x-[-1]" src={BottomBg} alt="Bottom Bg" />
         <Image className="mt-2" src={BottomBg} alt="Bottom Bg" />
       </div>
-    </div>
+    </footer>
   );
 };
 export default Footer;
