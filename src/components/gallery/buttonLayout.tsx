@@ -1,13 +1,21 @@
+"use client";
+
 import React from "react";
-import { Titles } from "@/data/gallery/Titles";
 import Button from "@/components/gallery/buttons";
+import { useRouter } from "next/navigation";
 
 const buttonLayout = () => {
+  const router = useRouter();
+
+  const handleSocialsRedirect = () => {
+    router.push("/gallery/socials");
+  };
   return (
     <div className="h-screen w-full">
-      {Titles.map((items, index) => (
-        <Button key={index} name={items.title} />
-      ))}
+      <Button name="Socials" onClick={handleSocialsRedirect} />
+      {/* <Button name="Cultural Events" onClick={}/> */}
+      {/* <Button name="Tabling" onClick={}/> */}
+      {/* <Button name="Fundraisers" onClick={}/> */}
     </div>
   );
 };

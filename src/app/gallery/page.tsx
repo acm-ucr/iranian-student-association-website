@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import BackGround from "@/components/gallery/background";
+import Background from "@/components/gallery/background";
 import ButtonLayout from "@/components/gallery/buttonLayout";
 import GalleryTitle from "@/public/gallery/Gallery.svg";
 
@@ -11,7 +11,7 @@ const gallery = () => {
         <Image src={GalleryTitle} alt="Our Gallery Page Title" />
       </div>
       <ButtonLayout />
-      <BackGround />
+      <Background />
     </div>
   );
 };
