@@ -12,7 +12,19 @@ import social8 from "@/public/gallery/socials/socials8.webp";
 import social9 from "@/public/gallery/socials/socials9.webp";
 
 // cultural events images
-import charmander from "@/public/gallery/cultural-events/charmander.webp";
+import culture1 from "@/public/gallery/cultural-events/culture1.webp"
+import culture2 from "@/public/gallery/cultural-events/culture2.webp"
+import culture3 from "@/public/gallery/cultural-events/culture3.webp"
+import culture4 from "@/public/gallery/cultural-events/culture4.webp"
+import culture5 from "@/public/gallery/cultural-events/culture5.webp"
+import culture6 from "@/public/gallery/cultural-events/culture6.webp"
+import culture7 from "@/public/gallery/cultural-events/culture7.webp"
+import culture8 from "@/public/gallery/cultural-events/culture8.webp"
+import culture9 from "@/public/gallery/cultural-events/culture9.webp"
+import culture10 from "@/public/gallery/cultural-events/culture10.webp"
+
+
+
 
 // tabling images
 
@@ -31,12 +43,18 @@ export const PICTURES: Record<string, (string | StaticImageData)[]> = {
     social2,
   ],
   "cultural-events": [
-    charmander,
-    charmander,
-    charmander,
-    charmander,
-    charmander,
-    charmander,
+    culture1,
+    culture2,
+    culture3,
+    culture4,
+    culture5,
+    culture6,
+    culture7,
+    culture8,
+    culture9,
+    culture10,
+
+
   ],
   tabling: [],
   fundraisers: [],
