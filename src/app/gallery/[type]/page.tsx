@@ -16,13 +16,14 @@ export async function generateStaticParams() {
 }
 
 type PageProps = {
-  params: {
+  params: Promise<{
     type: string;
-  };
+  }>;
 };
 
 const Page = async ({ params }: PageProps) => {
-  const { type } = await Promise.resolve(params);
+  const resolvedParams = await params;
+  const { type } = resolvedParams;
 
   const PAGES: Record<string, string> = {
     socials: "Socials",
