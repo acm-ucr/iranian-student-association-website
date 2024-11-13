@@ -4,7 +4,6 @@ import Image from "next/image";
 const mission = () => {
   return (
     <div className="flex min-h-screen flex-col items-center p-8">
-      {/* Image Section */}
       <section className="mb-8">
         <div className="aspect-w-16 aspect-h-9 w-full max-w-6xl overflow-hidden rounded-lg shadow-lg">
           <Image

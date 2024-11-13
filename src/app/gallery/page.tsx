@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import BackGround from "@/components/gallery/background";
+import Background from "@/components/gallery/background";
 import ButtonLayout from "@/components/gallery/buttonLayout";
 import GalleryTitle from "@/public/gallery/Gallery.svg";
 
@@ -14,8 +14,8 @@ const gallery = () => {
           className="md:mb-15 w-4/6 md:w-1/2 lg:mb-10 xl:w-5/12"
         />
       </div>
-      <BackGround />
       <ButtonLayout />
+      <Background />
     </div>
   );
 };
