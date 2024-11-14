@@ -17,9 +17,9 @@ import charmander from "@/public/gallery/cultural-events/charmander.webp";
 // tabling images
 
 // fundraisers images
-import fundraiser1 from "@/public/gallery/fundraiser/6F23CE3A-1576-4BEF-85D1-3ED4B3DD55D1_1_105_c.jpeg";
-import fundraiser2 from "@/public/gallery/fundraiser/B5F6566E-5CF4-446B-9E21-FB681C034363_1_105_c.jpeg";
-import fundraiser3 from "@/public/gallery/fundraiser/IMG_1909.jpeg";
+import fundraiser1 from "@/public/gallery/fundraisers/fundraiser1.webp";
+import fundraiser2 from "@/public/gallery/fundraisers/fundraiser2.webp";
+import fundraiser3 from "@/public/gallery/fundraisers/fundraiser3.webp";
 
 export const PICTURES: Record<string, (string | StaticImageData)[]> = {
   socials: [
