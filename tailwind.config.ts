@@ -6,6 +6,15 @@ module.exports = {
       fontFamily: {
         josefin: ["'Josefin Sans'", "sans-serif"],
       },
+      animation: {
+        "fade-down": "fadeDown 0.5s ease-out forwards",
+      },
+      keyframes: {
+        fadeDown: {
+          "0%": { opacity: 0, transform: "translateY(-20px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+      },
       colors: {
         isa: {
           "dark-red": "#540317",
@@ -14,6 +23,7 @@ module.exports = {
           "dark-yellow": "#BF9B36",
           "beige-100": "#f5e7d5",
           "light-gray": "#D9D9D9",
+          "light-beige": "#F0D9B9",
         },
       },
     },
