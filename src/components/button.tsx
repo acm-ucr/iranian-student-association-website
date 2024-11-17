@@ -5,7 +5,7 @@ const Button = (props: { txt: string; link: string }) => {
   return (
     <Link
       href={props.link}
-      className="box-border items-center justify-center rounded-md border-transparent bg-isa-light-red px-11 py-2 text-3xl"
+      className="box-border items-center justify-center rounded-md border-transparent bg-isa-light-red px-11 py-2 text-lg sm:text-2xl md:text-3xl lg:text-5xl"
     >
       <div className="relative inline-block whitespace-nowrap">
         <span className="relative font-normal text-isa-bright-yellow">
