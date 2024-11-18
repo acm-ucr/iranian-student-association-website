@@ -1,7 +1,6 @@
 import React from "react";
 import Paisley1 from "@/public/join-us/paisley1.webp";
 import Paisley2 from "@/public/join-us/paisley2.webp";
-import Title from "@/components/join-us/title";
 
 const BackgroundComponent = () => {
   return (
@@ -12,9 +11,6 @@ const BackgroundComponent = () => {
           alt="Paisley Top Left"
           className="absolute left-0 top-10 h-auto w-60"
         />
-        <div className="mb-20 flex justify-center">
-          <Title />
-        </div>
         <img
           src={Paisley2.src}
           alt="Paisley Bottom Right"
