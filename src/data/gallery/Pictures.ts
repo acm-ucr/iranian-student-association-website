@@ -24,6 +24,8 @@ import culture9 from "@/public/gallery/cultural-events/culture9.webp";
 import culture10 from "@/public/gallery/cultural-events/culture10.webp";
 
 // tabling images
+import tabling1 from "@/public/gallery/tabling/tabling1.webp";
+import tabling2 from "@/public/gallery/tabling/tabling2.webp";
 
 // fundraisers images
 
@@ -51,7 +53,7 @@ export const PICTURES: Record<string, (string | StaticImageData)[]> = {
     culture9,
     culture10,
   ],
-  tabling: [],
+  tabling: [tabling1, tabling2],
   fundraisers: [],
 };
 
