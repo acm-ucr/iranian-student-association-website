@@ -6,7 +6,7 @@ import ShabeYalda from "/src/public/culture/ShabeYalda.png";
 const CultureText = () => {
   return (
     <div>
-      <div className="mb-11 w-full text-balance px-11 pt-24 text-center text-4xl text-isa-dark-red">
+      <div className="mb-11 w-full text-balance px-11 pt-24 text-center text-isa-dark-red sm:text-lg md:text-2xl lg:mb-12 lg:text-4xl lg:leading-[65px]">
         <p>
           <b>Nowruz Significance:</b> Nowruz, the Persian New Year, is a
           significant cultural celebration that marks the beginning of the new
@@ -34,7 +34,7 @@ const CultureText = () => {
         ></Image>
       </div>
       <br></br>
-      <div className="px-52 text-center text-4xl text-isa-dark-red">
+      <div className="px-11 text-center text-isa-dark-red sm:text-lg md:text-2xl lg:mb-12 lg:text-4xl lg:leading-[65px]">
         <p>
           <b>Shabe Yalda Significance:</b> Shabe Yalda, also known as Yalda
           Night or the Winter Solstice celebration, is a significant and ancient
