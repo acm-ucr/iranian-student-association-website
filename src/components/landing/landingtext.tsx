@@ -11,7 +11,7 @@ const text = () => {
           alt={"Logo"}
           width={200}
           height={200}
-          className="flex justify-self-center rounded-full pb-4"
+          className="flex justify-self-center rounded-full border-2 border-black"
         />
       </div>
       <div>

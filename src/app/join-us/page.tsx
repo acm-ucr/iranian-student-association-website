@@ -2,6 +2,7 @@ import React from "react";
 import BackgroundComponent from "@/components/join-us/background";
 import Socials from "@/components/join-us/socials";
 import WrappedEvents from "@/components/join-us/WrappedEvents";
+import Title from "@/components/join-us/title";
 
 const page = () => {
   return (
@@ -12,8 +13,8 @@ const page = () => {
         </div>
 
         <div className="flex flex-grow flex-col items-center space-y-12">
-          <div className="mt-8 rounded-lg px-4 py-2 text-4xl tracking-widest text-black">
-            Join Us
+          <div className="mb-20 flex justify-center">
+            <Title />
           </div>
           <div className="mx-auto w-full max-w-2xl">
             <Socials />
