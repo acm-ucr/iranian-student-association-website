@@ -17,7 +17,7 @@ const mission = () => {
         </div>
       </section>
       <section className="mb-8 mt-8 max-w-6xl px-8 text-center">
-        <p className="text-2xl font-medium leading-normal text-isa-light-red md:text-5xl  lg:text-5xl">
+        <p className="text-2xl font-medium leading-normal text-isa-light-red md:text-5xl lg:text-5xl">
           The Iranian Student Association at UCR aims to promote inclusivity and
           cultural awareness by organizing events that celebrate our shared
           heritage, educate on political and historical topics, and foster a
