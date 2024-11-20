@@ -17,16 +17,16 @@ const CultureText = () => {
         </p>
       </div>
 
-      <div className="z-40 mb-11 flex flex-row">
+      <div className="z-40 mb-11 flex flex-row flex-wrap">
         <Image
-          className="w-1/2 scale-90 pl-9"
+          className="w-full sm:w-1/2 scale-90 sm:scale-100 pl-9 pr-2"
           src={ShabeYalda}
           alt="ShabeYaldaPhoto"
           width={711}
           height={433}
         ></Image>
         <Image
-          className="w-1/2 scale-90 pr-32"
+          className="w-full sm:w-1/2 scale-90 sm:scale-100 pl-9 pr-2"
           src={Nowruz}
           alt="NowruzPhoto"
           width={556}
