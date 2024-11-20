@@ -19,14 +19,14 @@ const CultureText = () => {
 
       <div className="z-40 mb-11 flex flex-row flex-wrap">
         <Image
-          className="w-full sm:w-1/2 scale-90 sm:scale-100 pl-9 pr-2"
+          className="w-full scale-90 pl-9 pr-2 sm:w-1/2 sm:scale-100"
           src={ShabeYalda}
           alt="ShabeYaldaPhoto"
           width={711}
           height={433}
         ></Image>
         <Image
-          className="w-full sm:w-1/2 scale-90 sm:scale-100 pl-9 pr-2"
+          className="w-full scale-90 pl-9 pr-2 sm:w-1/2 sm:scale-100"
           src={Nowruz}
           alt="NowruzPhoto"
           width={556}
