@@ -1,10 +1,10 @@
-import Text from "@/components/landing/landingtext";
+import HomePage from "@/components/landing/landingPageWrapper";
 import React from "react";
 
 const Home = () => {
   return (
     <div>
-      <Text />
+      <HomePage />
     </div>
   );
 };
