@@ -55,10 +55,10 @@ const Page = () => {
       <FadeInSection delay={0.3}>
         <div className="m-12 mb-8 mt-10 text-center font-[400] tracking-wider text-isa-dark-red sm:text-lg md:text-2xl lg:mb-12 lg:text-4xl lg:leading-[65px]">
           Our philanthropic partner for 2023-2024 is Child International is a
-          non-political, non-sectarian volunteer based nonprofit organization that
-          aims to provide equal opportunities for displaced and underprivileged
-          children by empowering them, providing them access to education, housing
-          and family assistance programs.
+          non-political, non-sectarian volunteer based nonprofit organization
+          that aims to provide equal opportunities for displaced and
+          underprivileged children by empowering them, providing them access to
+          education, housing and family assistance programs.
         </div>
       </FadeInSection>
 
