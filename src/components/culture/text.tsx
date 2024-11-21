@@ -1,12 +1,27 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Nowruz from "/src/public/culture/Nowruz.png";
 import ShabeYalda from "/src/public/culture/ShabeYalda.png";
 
+const animation = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0 },
+};
+
 const CultureText = () => {
   return (
     <div>
-      <div className="mb-11 w-full text-balance px-11 pt-24 text-center text-4xl text-isa-dark-red">
+      {/* Animated Nowruz Description */}
+      <motion.div
+        variants={animation}
+        initial="hidden"
+        whileInView="show"
+        transition={{ duration: 0.8 }}
+        className="mb-11 w-full text-balance px-11 pt-24 text-center text-4xl text-isa-dark-red"
+      >
         <p>
           <b>Nowruz Significance:</b> Nowruz, the Persian New Year, is a
           significant cultural celebration that marks the beginning of the new
@@ -15,9 +30,16 @@ const CultureText = () => {
           people not only in Iran but also in many other countries with Persian
           cultural influence.
         </p>
-      </div>
+      </motion.div>
 
-      <div className="z-40 mb-11 flex flex-row">
+      {/* Animated Images */}
+      <motion.div
+        variants={animation}
+        initial="hidden"
+        whileInView="show"
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="z-40 mb-11 flex flex-row"
+      >
         <Image
           className="w-1/2 scale-90 pl-9"
           src={ShabeYalda}
@@ -32,9 +54,16 @@ const CultureText = () => {
           width={556}
           height={431}
         ></Image>
-      </div>
-      <br></br>
-      <div className="px-52 text-center text-4xl text-isa-dark-red">
+      </motion.div>
+
+      {/* Animated Shabe Yalda Description */}
+      <motion.div
+        variants={animation}
+        initial="hidden"
+        whileInView="show"
+        transition={{ duration: 0.8, delay: 0.6 }}
+        className="px-52 text-center text-4xl text-isa-dark-red"
+      >
         <p>
           <b>Shabe Yalda Significance:</b> Shabe Yalda, also known as Yalda
           Night or the Winter Solstice celebration, is a significant and ancient
@@ -44,7 +73,7 @@ const CultureText = () => {
           the solstice. It is an event rich in symbolism and cultural importance
           for Iranians and others with Persian cultural ties.
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 };
