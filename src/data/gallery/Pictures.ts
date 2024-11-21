@@ -28,6 +28,9 @@ import tabling1 from "@/public/gallery/tabling/tabling1.webp";
 import tabling2 from "@/public/gallery/tabling/tabling2.webp";
 
 // fundraisers images
+import fundraiser1 from "@/public/gallery/fundraisers/fundraiser1.webp";
+import fundraiser2 from "@/public/gallery/fundraisers/fundraiser2.webp";
+import fundraiser3 from "@/public/gallery/fundraisers/fundraiser3.webp";
 
 export const PICTURES: Record<string, (string | StaticImageData)[]> = {
   socials: [
@@ -54,7 +57,7 @@ export const PICTURES: Record<string, (string | StaticImageData)[]> = {
     culture10,
   ],
   tabling: [tabling1, tabling2],
-  fundraisers: [],
+  fundraisers: [fundraiser1, fundraiser2, fundraiser3],
 };
 
 export default PICTURES;
