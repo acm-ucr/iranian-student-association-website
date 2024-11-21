@@ -55,7 +55,6 @@ const page = () => {
             Event Calendar
           </motion.div>
 
-          {/* Static Calendar */}
           <div className="w-full max-w-4xl">
             <WrappedEvents />
           </div>
