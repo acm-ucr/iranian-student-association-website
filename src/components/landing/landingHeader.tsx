@@ -4,7 +4,7 @@ import Link from "next/link";
 const landingHeader = () => {
   return (
     <div className="flex justify-between bg-gradient-to-b from-[#422c0c]/40 to-transparent px-40 py-4">
-      {["About Us", "Culture", "Join Us", "Gallery", "Philanthropy"].map(
+      {["Culture", "Join Us", "Gallery", "Philanthropy"].map(
         (label, index) => (
           <Link
             key={index}
