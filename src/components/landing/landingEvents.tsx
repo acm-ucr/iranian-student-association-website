@@ -12,7 +12,7 @@ type event = {
 
 const LandingEvents = () => {
   return (
-    <div className="mx-auto mt-28 pb-10 grid max-w-4xl grid-cols-1 gap-6 px-4 md:grid-cols-2">
+    <div className="mx-auto mt-28 grid max-w-4xl grid-cols-1 gap-6 px-4 pb-10 md:grid-cols-2">
       {EVENTS.map((event: event, index: number) => (
         <EventCard
           key={index}
