@@ -1,8 +1,7 @@
 import "./globals.css";
 import { Josefin_Sans } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
-import Navigation from "@/components/navigation";
-import Footer from "@/components/footer";
+import ConditionalLayout from "@/components/conditionalLayout";
 
 const josefin = Josefin_Sans({ subsets: ["latin"] });
 
@@ -22,9 +21,9 @@ export default function RootLayout({ children }: LayoutProps) {
         className={`${josefin.className} flex min-h-screen flex-col`}
         style={{ backgroundColor: "#FFEFD7" }}
       >
-        <Navigation />
-        <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
-        <Footer />
+        <ReactQueryClientProvider>
+          <ConditionalLayout>{children}</ConditionalLayout>
+        </ReactQueryClientProvider>
       </body>
     </html>
   );

@@ -1,0 +1,6 @@
+.bg-landing {
+  background-image: url("/landing/homeBG.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
