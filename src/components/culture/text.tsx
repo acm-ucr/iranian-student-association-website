@@ -7,7 +7,6 @@ import Nowruz from "/src/public/culture/Nowruz.png";
 import ShabeYalda from "/src/public/culture/ShabeYalda.png";
 import CultureTitle from "@/public/culture/Culture.svg";
 
-
 const animation = {
   hidden: { opacity: 0, y: 30 },
   show: { opacity: 1, y: 0 },
@@ -18,16 +17,15 @@ const CultureText = () => {
     <div>
       {/* Animated Title */}
       <div className="m-10 mb-10 mt-2 justify-self-center sm:m-20 sm:mt-5">
-      <motion.div
-        variants={animation}
-        initial="hidden"
-        whileInView="show"
-        transition={{ duration: 0.8 }}
-        className="mb-11 w-full text-balance px-11 pt-24 text-center text-isa-dark-red sm:text-lg md:text-2xl lg:mb-12 lg:text-4xl lg:leading-[65px]"
-      >
-         <Image src={CultureTitle} alt="Our Culture Page Title" />
-      </motion.div>
-       
+        <motion.div
+          variants={animation}
+          initial="hidden"
+          whileInView="show"
+          transition={{ duration: 0.8 }}
+          className="mb-11 w-full text-balance px-11 pt-24 text-center text-isa-dark-red sm:text-lg md:text-2xl lg:mb-12 lg:text-4xl lg:leading-[65px]"
+        >
+          <Image src={CultureTitle} alt="Our Culture Page Title" />
+        </motion.div>
       </div>
       {/* Animated Nowruz Description */}
       <motion.div
