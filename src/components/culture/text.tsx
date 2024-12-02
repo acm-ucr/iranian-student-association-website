@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Nowruz from "/src/public/culture/Nowruz.png";
 import ShabeYalda from "/src/public/culture/ShabeYalda.png";
+import CultureTitle from "@/public/culture/Culture.svg";
+
 
 const animation = {
   hidden: { opacity: 0, y: 30 },
@@ -15,6 +17,7 @@ const CultureText = () => {
   return (
     <div>
       {/* Animated Title */}
+      <div className="m-10 mb-10 mt-2 justify-self-center sm:m-20 sm:mt-5">
       <motion.div
         variants={animation}
         initial="hidden"
@@ -22,11 +25,10 @@ const CultureText = () => {
         transition={{ duration: 0.8 }}
         className="mb-11 w-full text-balance px-11 pt-24 text-center text-isa-dark-red sm:text-lg md:text-2xl lg:mb-12 lg:text-4xl lg:leading-[65px]"
       >
-        <h1>
-          <b>Persian Cultural Celebrations</b>
-        </h1>
+         <Image src={CultureTitle} alt="Our Culture Page Title" />
       </motion.div>
-
+       
+      </div>
       {/* Animated Nowruz Description */}
       <motion.div
         variants={animation}
