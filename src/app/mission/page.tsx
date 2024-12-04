@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Image from "next/image";
 import updatedmissiontitle from "@/public/mission/updatedmissiontitle.svg";
@@ -16,11 +16,10 @@ const animation1 = {
   },
 };
 
-
 const page = () => {
   return (
     <div>
-      <motion.div 
+      <motion.div
         variants={animation1}
         initial="hidden"
         whileInView="visible"
