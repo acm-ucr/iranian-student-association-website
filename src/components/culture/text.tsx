@@ -51,21 +51,23 @@ const CultureText = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="flex w-full flex-col items-center"
         >
-          <div className="w-full px-5 sm:flex sm:flex-row sm:items-start sm:px-0">
-            <Image
-              className="mb-4 w-full sm:mb-0 sm:mr-4 sm:w-1/2"
-              src={ShabeYalda}
-              alt="ShabeYaldaPhoto"
-              width={711}
-              height={433}
-            />
-            <Image
-              className="mb-4 w-full sm:mb-0 sm:ml-4 sm:w-1/2"
-              src={Nowruz}
-              alt="NowruzPhoto"
-              width={556}
-              height={431}
-            />
+          <div className="w-full px-5 sm:px-0 lg:px-20">
+            <div className="flex flex-col sm:flex-row w-full">
+              <Image
+                className="mb-4 w-full sm:mr-4 sm:w-1/2 md:mb-0 md:mr-4 lg:w-1/2"
+                src={ShabeYalda}
+                alt="ShabeYaldaPhoto"
+                width={711}
+                height={433}
+              />
+              <Image
+                className="mb-4 w-full sm:ml-4 sm:w-1/2 md:mb-0 md:ml-4 lg:w-1/2"
+                src={Nowruz}
+                alt="NowruzPhoto"
+                width={556}
+                height={431}
+              />
+            </div>
           </div>
         </motion.div>
       </div>
@@ -75,12 +77,13 @@ const CultureText = () => {
         initial="hidden"
         whileInView="show"
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="px-8 text-center text-3xl text-isa-dark-red sm:px-52"
+        className="px-8 text-center text-3xl text-isa-dark-red sm:px-52 lg:px-80"
       >
         <p>
           <b>Shabe Yalda Significance:</b> Shabe Yalda, also known as Yalda
           Night or the Winter Solstice celebration, is a significant and ancient
           Persian festival observed on the longest night of the year, which
+         
           typically falls on December 20th or 21st. This celebration marks the
           victory of light over darkness as the days begin to grow longer after
           the solstice. It is an event rich in symbolism and cultural importance
