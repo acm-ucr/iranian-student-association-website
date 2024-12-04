@@ -69,16 +69,17 @@ const CultureText = () => {
               />
             </div>
           </div>
+          {/* animation */}
         </motion.div>
       </div>
-      <br></br>
+      <br></br> 
       <motion.div
         variants={animation}
         initial="hidden"
         whileInView="show"
         transition={{ duration: 0.8, delay: 0.6 }}
         className="px-8 text-center text-3xl text-isa-dark-red sm:px-52 lg:px-80"
-      >
+      > 
         <p>
           <b>Shabe Yalda Significance:</b> Shabe Yalda, also known as Yalda
           Night or the Winter Solstice celebration, is a significant and ancient
