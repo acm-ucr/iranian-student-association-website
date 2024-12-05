@@ -5,7 +5,7 @@ import React from "react";
 import LandingHeader from "./landingHeader";
 import LandingTitle from "./landingTitle";
 import LandingEvents from "./landingEvents";
-import HomeBG from "@/public/home/ucr.webp";
+import HomeBG from "@/public/home/homeBG.webp";
 import Image from "next/image";
 
 const landingPageWrapper = () => {
