@@ -3,7 +3,7 @@
 import React from "react";
 import BackgroundComponent from "@/components/join-us/background";
 import Socials from "@/components/join-us/socials";
-import WrappedEvents from "@/components/join-us/WrappedEvents";
+import { Calendar } from "@/components/join-us/calendar/calendar";
 import Title from "@/components/join-us/title";
 import { motion } from "framer-motion";
 
@@ -56,7 +56,7 @@ const page = () => {
           </motion.div>
 
           <div className="w-full max-w-4xl">
-            <WrappedEvents />
+            <Calendar />
           </div>
         </div>
       </div>
