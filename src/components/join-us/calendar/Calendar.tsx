@@ -8,16 +8,10 @@ import { CalendarEvent } from "@/lib/calendar-types";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./button";
 
-interface CalendarProps {}
-
-interface FetchEventsResponse {
-  events: CalendarEvent[];
-}
-
-const Calendar: React.FC<CalendarProps> = () => {
-  const [currentDate, setCurrentDate] = useState<Date>(new Date());
+const Calendar = () => {
+  const [currentDate, setCurrentDate] = useState(new Date());
   const [events, setEvents] = useState<CalendarEvent[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState(true);
   const [selectedEvent, setSelectedEvent] = useState<CalendarEvent | null>(
     null,
   );
@@ -26,7 +20,7 @@ const Calendar: React.FC<CalendarProps> = () => {
     fetchEvents();
   }, [currentDate]);
 
-  const fetchEvents = async (): Promise<void> => {
+  const fetchEvents = async () => {
     try {
       setLoading(true);
 
@@ -47,7 +41,7 @@ const Calendar: React.FC<CalendarProps> = () => {
       const contentType = response.headers.get("content-type");
 
       if (contentType && contentType.includes("application/json")) {
-        const data: FetchEventsResponse = await response.json();
+        const data = await response.json();
         if (data.events) {
           setEvents(
             data.events.map((event: CalendarEvent) => {
@@ -92,18 +86,18 @@ const Calendar: React.FC<CalendarProps> = () => {
     }
   };
 
-  const nextMonth = (): void => setCurrentDate(addMonths(currentDate, 1));
-  const prevMonth = (): void => setCurrentDate(subMonths(currentDate, 1));
+  const nextMonth = () => setCurrentDate(addMonths(currentDate, 1));
+  const prevMonth = () => setCurrentDate(subMonths(currentDate, 1));
 
-  const handleEventClick = (event: CalendarEvent): void => {
+  const handleEventClick = (event: CalendarEvent) => {
     setSelectedEvent(event);
   };
 
-  const closeEventDetails = (): void => {
+  const closeEventDetails = () => {
     setSelectedEvent(null);
   };
 
-  const isAllDayEvent = (start: Date, end: Date): boolean => {
+  const isAllDayEvent = (start: Date, end: Date) => {
     const startMidnight = new Date(start).setHours(0, 0, 0, 0);
     const endMidnight = new Date(end).setHours(0, 0, 0, 0);
     return endMidnight - startMidnight === 24 * 60 * 60 * 1000;
