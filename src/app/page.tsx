@@ -1,3 +1,5 @@
+"use client";
+
 import HomePage from "@/components/landing/landingPageWrapper";
 import React from "react";
 
