@@ -23,53 +23,68 @@ export function Calendar() {
   const fetchEvents = async () => {
     try {
       setLoading(true);
-  
-      const timeMin = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).toISOString();
-      const timeMax = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).toISOString();
-  
-      const response = await fetch(`/api/calendar?timeMin=${timeMin}&timeMax=${timeMax}`);
-      const contentType = response.headers.get('content-type');
-  
-      if (contentType && contentType.includes('application/json')) {
+
+      const timeMin = new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth(),
+        1,
+      ).toISOString();
+      const timeMax = new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth() + 1,
+        0,
+      ).toISOString();
+
+      const response = await fetch(
+        `/api/calendar?timeMin=${timeMin}&timeMax=${timeMax}`,
+      );
+      const contentType = response.headers.get("content-type");
+
+      if (contentType && contentType.includes("application/json")) {
         const data = await response.json();
         if (data.events) {
           setEvents(
             data.events.map((event: CalendarEvent) => {
-              const isAllDay = isAllDayEvent(new Date(event.start), new Date(event.end));
+              const isAllDay = isAllDayEvent(
+                new Date(event.start),
+                new Date(event.end),
+              );
               const start = new Date(event.start);
               const end = new Date(event.end);
-  
+
               if (isAllDay) {
-                const localStart = new Date(start.getTime() + start.getTimezoneOffset() * 60000);
-                const localEnd = new Date(end.getTime() + end.getTimezoneOffset() * 60000);
-  
+                const localStart = new Date(
+                  start.getTime() + start.getTimezoneOffset() * 60000,
+                );
+                const localEnd = new Date(
+                  end.getTime() + end.getTimezoneOffset() * 60000,
+                );
+
                 return {
                   ...event,
                   start: localStart,
                   end: localEnd,
                 };
               }
-  
+
               return {
                 ...event,
                 start,
                 end,
               };
-            })
+            }),
           );
         }
       } else {
         const text = await response.text();
-        console.error('Error fetching events: Response is not JSON', text);
+        console.error("Error fetching events: Response is not JSON", text);
       }
     } catch (error) {
-      console.error('Error fetching events:', error);
+      console.error("Error fetching events:", error);
     } finally {
       setLoading(false);
     }
   };
-  
-  
 
   const nextMonth = () => setCurrentDate(addMonths(currentDate, 1));
   const prevMonth = () => setCurrentDate(subMonths(currentDate, 1));
