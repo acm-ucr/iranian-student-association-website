@@ -7,6 +7,7 @@ import { CalendarGrid } from "./calendarGrid";
 import { CalendarEvent } from "@/lib/calendar-types";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./button";
+import { motion, AnimatePresence } from "framer-motion";
 
 const CalendarWrapper = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -104,9 +105,19 @@ const CalendarWrapper = () => {
   };
 
   return (
-    <div className="relative mx-auto mb-8 flex w-full max-w-4xl flex-col overflow-hidden rounded-3xl border-4 border-isa-dark-red bg-isa-beige-100 bg-opacity-80 p-4 shadow-2xl drop-shadow-md">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      className="relative mx-auto mb-8 flex w-full max-w-4xl flex-col overflow-hidden rounded-3xl border-4 border-isa-dark-red bg-isa-beige-100 bg-opacity-80 p-4 shadow-2xl drop-shadow-md"
+    >
       {/* HEADER */}
-      <div className="mb-1 border-b border-isa-dark-red p-6">
+      <motion.div
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="mb-1 border-b border-isa-dark-red p-6"
+      >
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-3xl font-semibold text-isa-dark-red">
             {format(currentDate, "MMMM yyyy")}
@@ -131,70 +142,90 @@ const CalendarWrapper = () => {
           </div>
         </div>
         <CalendarHeader />
-      </div>
+      </motion.div>
 
       {/* GRID PART */}
-      <CalendarGrid
-        currentDate={currentDate}
-        events={events}
-        loading={loading}
-        onEventClick={handleEventClick}
-      />
-      {selectedEvent && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-20">
-          <div className="w-80 rounded-2xl bg-isa-beige-100 p-6 shadow-xl drop-shadow-xl">
-            <h3 className="text-lg font-semibold text-isa-dark-red">
-              {selectedEvent.summary}
-            </h3>
-            {/* ALL DAY EVENTS */}
-            {isAllDayEvent(selectedEvent.start, selectedEvent.end) ? (
-              <p className="text-isa-dark-red">Time: All day</p>
-            ) : (
-              <>
-                {format(selectedEvent.start, "yyyy-MM-dd") ===
-                format(selectedEvent.end, "yyyy-MM-dd") ? (
-                  // NORMAL EVENTS
-                  <>
-                    <p className="text-isa-dark-red">{`Date: ${format(
-                      selectedEvent.start,
-                      "PP",
-                    )}`}</p>
-                    <p className="text-isa-dark-red">
-                      {`Time: ${format(selectedEvent.start, "p")} - ${format(
-                        selectedEvent.end,
-                        "p",
-                      )}`}
-                    </p>
-                  </>
-                ) : (
-                  // MULTIPLE DAYS
-                  <>
-                    <p className="text-isa-dark-red">
-                      {`Starts: ${format(selectedEvent.start, "PP")}`}
-                    </p>
-                    <p className="text-isa-dark-red">
-                      {`Ends: ${format(selectedEvent.end, "PP")}`}
-                    </p>
-                  </>
-                )}
-              </>
-            )}
-            {selectedEvent.location && (
-              <p className="text-isa-dark-red">{`Location: ${selectedEvent.location}`}</p>
-            )}
-            {selectedEvent.description && (
-              <p className="text-isa-dark-red">{`Details: ${selectedEvent.description}`}</p>
-            )}
-            <Button
-              onClick={closeEventDetails}
-              className="mt-4 bg-isa-dark-red text-white"
+      <motion.div
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        <CalendarGrid
+          currentDate={currentDate}
+          events={events}
+          loading={loading}
+          onEventClick={handleEventClick}
+        />
+      </motion.div>
+
+      {/* EVENT DETAILS MODAL */}
+      <AnimatePresence>
+        {selectedEvent && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-20"
+          >
+            <motion.div
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+              className="w-80 rounded-2xl bg-isa-beige-100 p-6 shadow-xl drop-shadow-xl"
             >
-              Close
-            </Button>
-          </div>
-        </div>
-      )}
-    </div>
+              <h3 className="text-lg font-semibold text-isa-dark-red">
+                {selectedEvent.summary}
+              </h3>
+              {/* ALL DAY EVENTS */}
+              {isAllDayEvent(selectedEvent.start, selectedEvent.end) ? (
+                <p className="text-isa-dark-red">Time: All day</p>
+              ) : (
+                <>
+                  {format(selectedEvent.start, "yyyy-MM-dd") ===
+                  format(selectedEvent.end, "yyyy-MM-dd") ? (
+                    <>
+                      <p className="text-isa-dark-red">{`Date: ${format(
+                        selectedEvent.start,
+                        "PP",
+                      )}`}</p>
+                      <p className="text-isa-dark-red">
+                        {`Time: ${format(
+                          selectedEvent.start,
+                          "p",
+                        )} - ${format(selectedEvent.end, "p")}`}
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p className="text-isa-dark-red">
+                        {`Starts: ${format(selectedEvent.start, "PP")}`}
+                      </p>
+                      <p className="text-isa-dark-red">
+                        {`Ends: ${format(selectedEvent.end, "PP")}`}
+                      </p>
+                    </>
+                  )}
+                </>
+              )}
+              {selectedEvent.location && (
+                <p className="text-isa-dark-red">{`Location: ${selectedEvent.location}`}</p>
+              )}
+              {selectedEvent.description && (
+                <p className="text-isa-dark-red">{`Details: ${selectedEvent.description}`}</p>
+              )}
+              <Button
+                onClick={closeEventDetails}
+                className="mt-4 bg-isa-dark-red text-white"
+              >
+                Close
+              </Button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 };
 
