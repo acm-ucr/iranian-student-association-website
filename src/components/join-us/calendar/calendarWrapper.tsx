@@ -8,7 +8,7 @@ import { CalendarEvent } from "@/lib/calendar-types";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./button";
 
-const Calendar = () => {
+const CalendarWrapper = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [events, setEvents] = useState<CalendarEvent[]>([]);
   const [loading, setLoading] = useState(true);
@@ -167,4 +167,4 @@ const Calendar = () => {
   );
 };
 
-export default Calendar;
+export default CalendarWrapper;
