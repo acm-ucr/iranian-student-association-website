@@ -37,7 +37,7 @@ export class GoogleCalendarService {
         ),
         end: new Date(event.end?.dateTime || event.end?.date || Date.now()),
         description: event.description || undefined,
-        location: event.location || "No location provided",
+        location: event.location || undefined,
       }));
     } catch (error) {
       console.error("Error fetching calendar events:", error);
