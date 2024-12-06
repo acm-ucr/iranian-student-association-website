@@ -3,7 +3,7 @@
 import React from "react";
 import BackgroundComponent from "@/components/join-us/background";
 import Socials from "@/components/join-us/socials";
-import { Calendar } from "@/components/join-us/calendar/calendar";
+import Calendar from "@/components/join-us/calendar/calendar";
 import Title from "@/components/join-us/title";
 import { motion } from "framer-motion";
 
