@@ -23,7 +23,7 @@ const page = () => {
         variants={animation1}
         initial="hidden"
         whileInView="visible"
-        transition={{ delay: 0.8 }}
+        transition={{ duration: 0.8 }}
         className="mb-8 flex justify-center md:mb-16 lg:mb-20"
       >
         <Image src={updatedmissiontitle} alt="Our Mission Page Title" />

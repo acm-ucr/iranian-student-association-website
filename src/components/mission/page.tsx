@@ -22,7 +22,7 @@ const mission = () => {
           variants={animation1}
           initial="hidden"
           whileInView="visible"
-          transition={{ delay: 0.8 }}
+          transition={{ duration: 0.8 }}
           className="aspect-w-16 aspect-h-9 w-full max-w-6xl overflow-hidden rounded-lg shadow-lg"
         >
           <Image
@@ -40,7 +40,7 @@ const mission = () => {
           variants={animation1}
           initial="hidden"
           whileInView="visible"
-          transition={{ delay: 0.8 }}
+          transition={{ duration: 0.8 }}
           className="text-2xl font-medium leading-normal text-isa-light-red md:text-5xl lg:text-5xl"
         >
           The Iranian Student Association at UCR aims to promote inclusivity and
