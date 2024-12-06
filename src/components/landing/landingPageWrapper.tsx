@@ -1,9 +1,11 @@
+"use client";
+
 import React from "react";
 
-import Header from "./landingHeader";
+import LandingHeader from "./landingHeader";
 import LandingTitle from "./landingTitle";
 import LandingEvents from "./landingEvents";
-import HomeBG from "@/public/home/ucr.webp";
+import HomeBG from "@/public/home/homeBG.webp";
 import Image from "next/image";
 
 const landingPageWrapper = () => {
@@ -14,7 +16,7 @@ const landingPageWrapper = () => {
         alt="Home Page BG"
         className="absolute -z-10 h-full w-full object-cover"
       />
-      <Header />
+      <LandingHeader />
       <LandingTitle />
       <LandingEvents />
     </div>
