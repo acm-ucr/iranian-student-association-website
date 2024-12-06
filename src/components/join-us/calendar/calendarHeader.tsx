@@ -4,7 +4,7 @@ export function CalendarHeader() {
   return (
     <div className="grid grid-cols-7 gap-4 text-center">
       {days.map((day) => (
-        <div key={day} className="text-sm font-semibold text-gray-600">
+        <div key={day} className="text-md font-semibold text-isa-dark-red">
           {day}
         </div>
       ))}

@@ -104,10 +104,11 @@ const CalendarWrapper = () => {
   };
 
   return (
-    <div className="mx-auto w-full max-w-4xl overflow-hidden rounded-xl bg-white shadow-lg">
-      <div className="border-b border-gray-200 p-6">
+    <div className="relative mx-auto mb-8 flex w-full max-w-4xl flex-col overflow-hidden rounded-3xl border-4 border-isa-dark-red bg-isa-beige-100 bg-opacity-80 p-4 shadow-2xl drop-shadow-md">
+      {/* HEADER */}
+      <div className="mb-1 border-b border-isa-dark-red p-6">
         <div className="mb-4 flex items-center justify-between">
-          <h2 className="text-2xl font-semibold text-gray-800">
+          <h2 className="text-3xl font-semibold text-isa-dark-red">
             {format(currentDate, "MMMM yyyy")}
           </h2>
           <div className="flex gap-2">
@@ -115,22 +116,24 @@ const CalendarWrapper = () => {
               variant="outline"
               size="icon"
               onClick={prevMonth}
-              className="h-8 w-8"
+              className="h-8 w-8 text-isa-dark-red"
             >
-              <ChevronLeft className="h-4 w-4" />
+              <ChevronLeft className="h-8 w-8" />
             </Button>
             <Button
               variant="outline"
               size="icon"
               onClick={nextMonth}
-              className="h-8 w-8"
+              className="h-8 w-8 text-isa-dark-red"
             >
-              <ChevronRight className="h-4 w-4" />
+              <ChevronRight className="h-8 w-8" />
             </Button>
           </div>
         </div>
         <CalendarHeader />
       </div>
+
+      {/* GRID PART */}
       <CalendarGrid
         currentDate={currentDate}
         events={events}
@@ -138,26 +141,54 @@ const CalendarWrapper = () => {
         onEventClick={handleEventClick}
       />
       {selectedEvent && (
-        <div className="event-details-modal fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="modal-content rounded-lg bg-white p-6 shadow-lg">
-            <h3 className="text-xl font-semibold">{selectedEvent.summary}</h3>
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-20">
+          <div className="w-80 rounded-2xl bg-isa-beige-100 p-6 shadow-xl drop-shadow-xl">
+            <h3 className="text-lg font-semibold text-isa-dark-red">
+              {selectedEvent.summary}
+            </h3>
+            {/* ALL DAY EVENTS */}
             {isAllDayEvent(selectedEvent.start, selectedEvent.end) ? (
-              <p>All day</p>
+              <p className="text-isa-dark-red">Time: All day</p>
             ) : (
-              <p>
-                {format(selectedEvent.start, "PP p")} -{" "}
-                {format(selectedEvent.end, "PP p")}
-              </p>
+              <>
+                {format(selectedEvent.start, "yyyy-MM-dd") ===
+                format(selectedEvent.end, "yyyy-MM-dd") ? (
+                  // NORMAL EVENTS
+                  <>
+                    <p className="text-isa-dark-red">{`Date: ${format(
+                      selectedEvent.start,
+                      "PP",
+                    )}`}</p>
+                    <p className="text-isa-dark-red">
+                      {`Time: ${format(selectedEvent.start, "p")} - ${format(
+                        selectedEvent.end,
+                        "p",
+                      )}`}
+                    </p>
+                  </>
+                ) : (
+                  // MULTIPLE DAYS
+                  <>
+                    <p className="text-isa-dark-red">
+                      {`Starts: ${format(selectedEvent.start, "PP")}`}
+                    </p>
+                    <p className="text-isa-dark-red">
+                      {`Ends: ${format(selectedEvent.end, "PP")}`}
+                    </p>
+                  </>
+                )}
+              </>
             )}
             {selectedEvent.location && (
-              <p className="mt-2 text-gray-600">
-                <strong>Location:</strong> {selectedEvent.location}
-              </p>
+              <p className="text-isa-dark-red">{`Location: ${selectedEvent.location}`}</p>
             )}
             {selectedEvent.description && (
-              <p className="mt-4 text-gray-800">{selectedEvent.description}</p>
+              <p className="text-isa-dark-red">{`Details: ${selectedEvent.description}`}</p>
             )}
-            <Button onClick={closeEventDetails} className="mt-6">
+            <Button
+              onClick={closeEventDetails}
+              className="mt-4 bg-isa-dark-red text-white"
+            >
               Close
             </Button>
           </div>
