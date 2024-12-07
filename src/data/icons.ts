@@ -1,6 +1,6 @@
 import { SiLinktree } from "react-icons/si";
 import { IoMdMail } from "react-icons/io";
-import { PiTiktokLogoThin } from "react-icons/pi";
+import { FaTiktok } from "react-icons/fa";
 import { SiGroupme } from "react-icons/si";
 import { AiFillInstagram } from "react-icons/ai";
 
@@ -11,7 +11,7 @@ export const ICONS = [
   },
   {
     link: "https://tiktok.com/@isaatucr",
-    icon: PiTiktokLogoThin,
+    icon: FaTiktok,
   },
   {
     link: "https://groupme.com/join_group/86919374/BImlwFmw",

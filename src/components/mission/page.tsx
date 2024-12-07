@@ -31,7 +31,7 @@ const mission = () => {
             alt="Group Mission"
             layout="responsive"
             width={1600}
-            height={900}
+            height={800}
             className="object-cover"
           />
         </motion.div>
