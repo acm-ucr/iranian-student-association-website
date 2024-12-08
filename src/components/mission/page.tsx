@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import group from "@/public/mission/group.svg"
+import group from "@/public/mission/group.svg";
 
 const animation1 = {
   hidden: {
