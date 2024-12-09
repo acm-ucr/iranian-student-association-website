@@ -15,7 +15,6 @@ const animation = {
 const CultureText = () => {
   return (
     <div>
-      {/* Animated Title */}
       <div className="m-10 mb-10 mt-2 justify-self-center sm:m-20 sm:mt-5">
         <motion.div
           variants={animation}
@@ -27,7 +26,6 @@ const CultureText = () => {
           <Image src={CultureTitle} alt="Our Culture Page Title" />
         </motion.div>
       </div>
-      {/* Animated Nowruz Description */}
       <motion.div
         variants={animation}
         initial="hidden"
@@ -45,39 +43,42 @@ const CultureText = () => {
         </p>
       </motion.div>
 
-      <div className="z-40 mb-11 flex flex-row flex-wrap">
-        {/* Animated Images */}
+      <div className="z-40 mb-11 flex w-full flex-row flex-wrap justify-center">
         <motion.div
           variants={animation}
           initial="hidden"
           whileInView="show"
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="z-40 mb-11 flex flex-row"
+          className="flex w-full flex-col items-center"
         >
-          <Image
-            className="w-full scale-90 pl-9 pr-2 sm:w-1/2 sm:scale-100"
-            src={ShabeYalda}
-            alt="ShabeYaldaPhoto"
-            width={711}
-            height={433}
-          ></Image>
-          <Image
-            className="w-full scale-90 pl-9 pr-2 sm:w-1/2 sm:scale-100"
-            src={Nowruz}
-            alt="NowruzPhoto"
-            width={556}
-            height={431}
-          ></Image>
+          <div className="w-full px-5 sm:px-0 lg:px-20">
+            <div className="flex w-full flex-col sm:flex-row">
+              <Image
+                className="mb-4 w-full sm:mr-4 sm:w-1/2 md:mb-0 md:mr-4 lg:w-1/2"
+                src={ShabeYalda}
+                alt="ShabeYaldaPhoto"
+                width={711}
+                height={433}
+              />
+              <Image
+                className="mb-4 w-full sm:ml-4 sm:w-1/2 md:mb-0 md:ml-4 lg:w-1/2"
+                src={Nowruz}
+                alt="NowruzPhoto"
+                width={556}
+                height={431}
+              />
+            </div>
+          </div>
+          {/* animation */}
         </motion.div>
       </div>
       <br></br>
-      {/* Animated Shabe Yalda Description */}
       <motion.div
         variants={animation}
         initial="hidden"
         whileInView="show"
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="px-52 text-center text-4xl text-isa-dark-red"
+        className="px-8 text-center text-3xl text-isa-dark-red sm:px-52 lg:px-80"
       >
         <p>
           <b>Shabe Yalda Significance:</b> Shabe Yalda, also known as Yalda
