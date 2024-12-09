@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import groupPic from "@/public/mission/group.svg";
+import group from "@/public/mission/group.svg";
 
 const animation1 = {
   hidden: {
@@ -27,7 +27,7 @@ const mission = () => {
           className="aspect-w-16 aspect-h-9 w-full max-w-6xl overflow-hidden rounded-lg shadow-lg"
         >
           <Image
-            src={groupPic}
+            src={group}
             alt="Group Mission"
             layout="responsive"
             width={1600}

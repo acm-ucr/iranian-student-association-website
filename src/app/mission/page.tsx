@@ -24,7 +24,7 @@ const page = () => {
         initial="hidden"
         whileInView="visible"
         transition={{ duration: 0.8 }}
-        className="mb-8 flex justify-center sm:px-5 md:mb-16 lg:mb-20"
+        className="mb-8 flex justify-center px-7 md:mb-16 lg:mb-20"
       >
         <Image src={updatedmissiontitle} alt="Our Mission Page Title" />
       </motion.div>
