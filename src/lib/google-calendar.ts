@@ -10,8 +10,11 @@ export class GoogleCalendarService {
 
   constructor() {
     this.auth = new JWT({
-      email: process.env.GOOGLE_CLIENT_EMAIL,
-      key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+      email: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL,
+      key: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY?.replace(
+        /\\n/g,
+        "\n",
+      ),
       scopes: SCOPES,
     });
 
@@ -21,7 +24,7 @@ export class GoogleCalendarService {
   async getEvents(timeMin: Date, timeMax: Date): Promise<CalendarEvent[]> {
     try {
       const response = await this.calendar.events.list({
-        calendarId: process.env.GOOGLE_CALENDAR_ID,
+        calendarId: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL,
         timeMin: timeMin.toISOString(),
         timeMax: timeMax.toISOString(),
         singleEvents: true,
