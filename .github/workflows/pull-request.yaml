@@ -39,7 +39,7 @@ jobs:
 
     env:
       NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY: ${{secrets.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY}}
-      NEXT_PUBLIC_CALENDAR_ID: ${{secrets.NEXT_PUBLIC_CALENDAR_ID}}
+      NEXT_PUBLIC_CALENDAR_EMAIL: ${{secrets.NEXT_PUBLIC_CALENDAR_EMAIL}}
 
     steps:
       - uses: actions/checkout@v4

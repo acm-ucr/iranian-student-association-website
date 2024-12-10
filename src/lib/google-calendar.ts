@@ -11,7 +11,7 @@ export class GoogleCalendarService {
   constructor() {
     this.auth = new JWT({
       email: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL,
-      key: process.env.GNEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY?.replace(
+      key: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY?.replace(
         /\\n/g,
         "\n",
       ),
