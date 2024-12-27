@@ -2,34 +2,30 @@ const events = [
   {
     date: "FEB 19",
     time: "8 PM",
-    title: "Social Event",
+    title: "Event coming soon...",
     location: "Location",
-    description:
-      "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem.",
+    description: "Event description.",
   },
   {
     date: "MAR 10",
     time: "6 PM",
-    title: "Cultural Meetup",
+    title: "Event coming soon...",
     location: "Location",
-    description:
-      "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem.",
+    description: "Event description.",
   },
   {
     date: "FEB 19",
     time: "8 PM",
-    title: "Social Event",
+    title: "Event coming soon...",
     location: "Location",
-    description:
-      "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem.",
+    description: "Event description.",
   },
   {
     date: "MAR 10",
     time: "6 PM",
-    title: "Cultural Meetup",
+    title: "Event coming soon...",
     location: "Location",
-    description:
-      "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem.",
+    description: "Event description.",
   },
 ];
 

@@ -62,20 +62,20 @@ const Page = () => {
         </div>
       </FadeInSection>
 
-      <FadeInSection delay={0.4}>
+      <FadeInSection delay={0.3}>
         <Button
           link="https://easy-ware-forms.com/iscc-charity/donate"
           txt="Donate"
         />
       </FadeInSection>
 
-      <FadeInSection delay={0.5}>
+      <FadeInSection delay={0.3}>
         <div className="m-6 mb-0 text-xl tracking-widest text-black sm:text-4xl md:text-5xl lg:text-6xl">
           Currently Supporting
         </div>
       </FadeInSection>
 
-      <FadeInSection delay={0.6}>
+      <FadeInSection delay={0.3}>
         <div className="flex items-center justify-center">
           <div className="h-1/2 w-1/4">
             <Image
@@ -88,13 +88,13 @@ const Page = () => {
         </div>
       </FadeInSection>
 
-      <FadeInSection delay={0.7}>
+      <FadeInSection delay={0.3}>
         <div className="m-6 mb-0 mt-8 text-xl tracking-widest text-black sm:text-4xl md:text-5xl lg:mt-12 lg:text-6xl">
           Previously Supported
         </div>
       </FadeInSection>
 
-      <FadeInSection delay={0.8}>
+      <FadeInSection delay={0.3}>
         <div className="mb-11 ml-10 mr-10 flex justify-center gap-12 sm:ml-8 sm:mr-8 md:ml-16 md:mr-16">
           <div className="h-1/2 w-1/4">
             <Image
