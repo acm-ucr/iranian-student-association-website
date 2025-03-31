@@ -13,7 +13,6 @@ type Item = {
 };
 
 const Navigation = () => {
-  const [selected, setSelected] = useState("");
   const [nav, setNav] = useState(false);
 
   const pathname = usePathname();
@@ -22,10 +21,7 @@ const Navigation = () => {
     <nav className="bg-beige-100 w-full border-gray-200 py-4">
       <div className="flex w-full items-center justify-between px-4 sm:px-6">
         {/* Logo Section */}
-        <Link
-          href="/"
-          className="flex items-center"
-        >
+        <Link href="/" className="flex items-center">
           <div className="rounded-full border-2 border-black">
             <Image
               src={Logo}
@@ -70,7 +66,6 @@ const Navigation = () => {
             href={item.href}
             key={index}
             onClick={() => {
-              setSelected(item.name);
               setNav(false);
             }}
             className="w-full py-2 text-center font-semibold text-black hover:bg-gray-200"
