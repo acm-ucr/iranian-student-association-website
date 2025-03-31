@@ -5,6 +5,7 @@ import Image from "next/image";
 import Logo from "@/public/logo.webp";
 import { items } from "@/data/nav";
 import { FaBars } from "react-icons/fa";
+import { usePathname } from "next/navigation";
 
 type Item = {
   name: string;
@@ -15,13 +16,14 @@ const Navigation = () => {
   const [selected, setSelected] = useState("");
   const [nav, setNav] = useState(false);
 
+  const pathname = usePathname();
+
   return (
     <nav className="bg-beige-100 w-full border-gray-200 py-4">
       <div className="flex w-full items-center justify-between px-4 sm:px-6">
         {/* Logo Section */}
         <Link
           href="/"
-          onClick={() => setSelected("")}
           className="flex items-center"
         >
           <div className="rounded-full border-2 border-black">
@@ -39,9 +41,9 @@ const Navigation = () => {
         <ul className="hidden space-x-4 sm:flex md:space-x-8 lg:space-x-8">
           {items.map((item: Item, index: number) => (
             <li key={index}>
-              <Link href={item.href} onClick={() => setSelected(item.name)}>
+              <Link href={item.href}>
                 <div
-                  className={`text-sm font-semibold transition-colors duration-300 hover:text-gray-600 md:text-lg lg:text-xl ${selected === item.name ? "text-black" : "text-gray-800"}`}
+                  className={`text-sm font-semibold transition-colors duration-300 hover:text-gray-600 md:text-lg lg:text-xl ${pathname === item.href ? "underline" : ""}`}
                 >
                   {item.name}
                 </div>
