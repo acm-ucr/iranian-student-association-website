@@ -13,9 +13,8 @@ type Item = {
 };
 
 const Navigation = () => {
-  const [nav, setNav] = useState(false);
-
   const pathname = usePathname();
+  const [nav, setNav] = useState(false);
 
   return (
     <nav className="bg-beige-100 w-full border-gray-200 py-4">
@@ -35,13 +34,13 @@ const Navigation = () => {
 
         {/* Desktop Navigation Items */}
         <ul className="hidden space-x-4 sm:flex md:space-x-8 lg:space-x-8">
-          {items.map((item: Item, index: number) => (
+          {items.map(({ href, name }: Item, index: number) => (
             <li key={index}>
-              <Link href={item.href}>
+              <Link href={href}>
                 <div
-                  className={`text-sm font-semibold transition-colors duration-300 hover:text-gray-600 md:text-lg lg:text-xl ${pathname === item.href ? "underline" : ""}`}
+                  className={`text-sm font-semibold transition-colors duration-300 hover:text-gray-600 md:text-lg lg:text-xl ${pathname === href ? "underline" : ""}`}
                 >
-                  {item.name}
+                  {name}
                 </div>
               </Link>
             </li>
