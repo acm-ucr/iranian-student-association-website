@@ -37,13 +37,19 @@ const Navigation = () => {
 
         {/* Desktop Navigation Items */}
         <ul className="hidden space-x-4 sm:flex md:space-x-8 lg:space-x-8">
-          {items.map((item: Item, index: number) => (
+          {items.map(({ href, name}: Item, index: number) => (
             <li key={index}>
+<<<<<<< Updated upstream
               <Link href={item.href} onClick={() => setSelected(item.name)}>
                 <div
                   className={`text-sm font-semibold transition-colors duration-300 hover:text-gray-600 md:text-lg lg:text-xl ${selected === item.name ? "text-black" : "text-gray-800"}`}
+=======
+              <Link href={href}>
+                <div
+                  className={`text-sm font-semibold transition-colors duration-300 hover:text-gray-600 md:text-lg lg:text-xl ${pathname === href ? "underline" : ""}`}
+>>>>>>> Stashed changes
                 >
-                  {item.name}
+                  {name}
                 </div>
               </Link>
             </li>
