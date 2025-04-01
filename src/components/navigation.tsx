@@ -16,6 +16,8 @@ const Navigation = () => {
   const pathname = usePathname();
   const [nav, setNav] = useState(false);
 
+  const pathname = usePathname();
+
   return (
     <nav className="bg-beige-100 w-full border-gray-200 py-4">
       <div className="flex w-full items-center justify-between px-4 sm:px-6">
